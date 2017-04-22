@@ -1,0 +1,23 @@
+{
+    "name": "zonuexe/mastodon-api",
+    "description": "A PHP interface for Mastodon.",
+    "license": "GPL-3.0",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "zonuexe/objectsystem": "^0.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "files": ["src/functions.php", "src/Entity/helpers.php"],
+        "psr-4": {
+            "Baguette\\Mastodon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Baguette\\Mastodon\\": "tests/"
+        }
+    }
+}
