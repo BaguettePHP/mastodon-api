@@ -9,6 +9,8 @@
  */
 namespace Baguette\Mastodon\Entity
 {
+    const DATETIME_FORMAT = 'Y-m-d\TH:i:s.uO';
+
     /**
      * @param  mixed $value
      * @return string|array
@@ -20,5 +22,27 @@ namespace Baguette\Mastodon\Entity
         }
 
         return \Teto\Object\Helper::toArray($value);
+    }
+
+    /**
+     * Mapping values to class
+     *
+     * @param  string|string[] $class
+     * @param  mixed           $values
+     * @return Entity|Entity[]|\DateTimeImmutable
+     */
+    function map($class, $values)
+    {
+        if (!is_array($class)) {
+            return ($values instanceof $class) ? $values : new $class($values);
+        }
+
+        $class = array_pop($class);
+        $retval = [];
+        foreach ($values as $obj) {
+            $retval[] = ($obj instanceof $class) ? $obj : new $class($obj);
+        }
+
+        return $retval;
     }
 }
