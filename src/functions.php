@@ -9,3 +9,12 @@
  */
 
 namespace Baguette\Mastodon;
+
+/**
+ * @param  string
+ * @return \Baguette\Mastodon\Service\Scope
+ */
+function scope($scope)
+{
+    return new \Baguette\Mastodon\Service\Scope(explode(' ', $scope));
+}
