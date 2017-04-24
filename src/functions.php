@@ -8,4 +8,4 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
 
-namespace Mastodon;
+namespace Baguette\Mastodon;

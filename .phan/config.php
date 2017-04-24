@@ -15,9 +15,15 @@ return [
     // Thus, both first-party and third-party code being used by
     // your application should be included in this list.
     'directory_list' => [
-        'src',
+        'src/',
+        'tests/',
         'vendor/zonuexe/objectsystem/src/',
+        'vendor/phpunit/phpunit/src/',
         'vendor/guzzlehttp/guzzle/src/',
+    ],
+    'file_list' => [
+        'src/functions.php',
+        'src/Entity/helpers.php',
     ],
 
     // A directory list that defines files that will be excluded
