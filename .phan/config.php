@@ -17,9 +17,11 @@ return [
     'directory_list' => [
         'src/',
         'tests/',
-        'vendor/zonuexe/objectsystem/src/',
-        'vendor/phpunit/phpunit/src/',
         'vendor/guzzlehttp/guzzle/src/',
+        'vendor/phpunit/phpunit/src/',
+        'vendor/psr/http-message/src/',
+        'vendor/respect/validation/library/',
+        'vendor/zonuexe/objectsystem/src/',
     ],
     'file_list' => [
         'src/functions.php',
