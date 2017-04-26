@@ -10,11 +10,107 @@
 
 namespace Baguette\Mastodon;
 
+use Baguette\Mastodon\Service;
+use Baguette\Mastodon\Service\Scope;
+
 /**
- * @param  string
- * @return \Baguette\Mastodon\Service\Scope
+ * @param  string   $instance
+ * @param  string   $client_id
+ * @param  string   $client_secret
+ * @param  array    $options
+ * @return Mastodon
+ */
+function session($instance, $client_id, $client_secret, array $options)
+{
+    $scope = null;
+    $credential = null;
+    $authorization = null;
+
+    $client = new Client($instance);
+
+    if (isset($options['scope'])) {
+        $scope = scope($options['scope']);
+    }
+
+    if (isset($options['credential'])) {
+        $credential = credential($options['credential']);
+    }
+
+    if (isset($options['authorization'])) {
+        $authorization = authorization($options['authorization']);
+    }
+
+    //throw new \LogicException('"scope" is not set.');
+
+    $auth_factory = new Service\AuthFactory($client, $client_id, $client_secret);
+    if ($credential !== null) {
+        $auth_factory->setCredential($credential);
+    }
+
+    $session = new Service\SessionStorage($auth_factory, $scope);
+    if ($authorization !== null) {
+        $session->setAuthorization($authorization);
+    }
+
+    return new Mastodon($client, $session);
+}
+
+/**
+ * @param  Scope|string|string[]
+ * @return Scope
  */
 function scope($scope)
 {
-    return new \Baguette\Mastodon\Service\Scope(explode(' ', $scope));
+    if (is_array($scope)) {
+        return new Scope($scope);
+    } elseif ($scope instanceof Scope) {
+        return $scope;
+    }
+
+    return new Scope(explode(' ', $scope));
+}
+
+/**
+ * @param  string $toot_string
+ * @param  array  $options
+ * @return Service\Toot
+ */
+function toot($toot_string, array $options = [])
+{
+    return new Service\Toot($toot_string, $options);
+}
+
+/**
+ * @return Service\Credential
+ */
+function credential(array $data)
+{
+    if (isset($data['username'], $data['password'])) {
+        return new Service\PasswordCredential($data['username'], $data['password']);
+    }
+}
+
+/**
+ * @return Service\Authorization
+ */
+function authorization(array $data)
+{
+    return Service\Authorization::fromObject((object)$data);
+}
+
+/**
+ * @return \GuzzleHttp\ClientInterface
+ */
+function http(\GuzzleHttp\ClientInterface $client = null)
+{
+    /** @var \GuzzleHttp\ClientInterface */
+    static $cached_client;
+
+    if ($client !== null) {
+        $cached_client = $client;
+    } elseif ($cached_client === null) {
+        $cached_client = new \GuzzleHttp\Client;
+    }
+
+    return $cached_client;
 }
