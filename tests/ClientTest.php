@@ -10,14 +10,14 @@ namespace Baguette\Mastodon;
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#tag
  */
-class TagTest extends \Baguette\Mastodon\TestCase
+class ClientTest extends \Baguette\Mastodon\TestCase
 {
     /**
      * @dataProvider dataProviderFor_test
      */
     public function test($input, array $expected)
     {
-        $actual = new Service($input);
+        $actual = new Client($input);
 
         $this->assertEquals($expected['scheme'],   $actual->getScheme());
         $this->assertEquals($expected['hostname'], $actual->getHostname());
