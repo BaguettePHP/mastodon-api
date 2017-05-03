@@ -18,6 +18,8 @@ return [
         'src/',
         'tests/',
         'vendor/guzzlehttp/guzzle/src/',
+        'vendor/guzzlehttp/promises/src/',
+        'vendor/guzzlehttp/psr7/src/',
         'vendor/phpunit/phpunit/src/',
         'vendor/psr/http-message/src/',
         'vendor/respect/validation/library/',
