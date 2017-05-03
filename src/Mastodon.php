@@ -11,6 +11,9 @@ use Baguette\Mastodon\Service\SessionStorage;
  * @copyright 2017 Baguette HQ
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  * @method Entity\Account fetchAccount(int $id)
+ * @method Entity\Account getAccountCurrentUser()
+ * @method Entity\Account updateAccount(array $update_data)
+ * @method Entity\Account postStatus(Service\Toot $toot)
  */
 final class Mastodon
 {
