@@ -86,6 +86,29 @@ class Requester
     }
 
     /**
+     * Getting an account's followers
+     *
+     * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user
+     * @param  Client         $client
+     * @param  SessionStorage $session
+     * @param  int            $account_id
+     * @return Entity\Account[]
+     */
+    public static function getAccountFollowers(Client $client, SessionStorage $session, $account_id)
+    {
+        v::intVal()->assert($account_id);
+
+        $query = [];
+
+        return static::map(
+            [Entity\Account::class],
+            $client->requestAPI('GET', sprintf('/api/v1/accounts/%d/followers', $account_id), [
+                'query' => $query
+            ], $session)
+        );
+    }
+
+    /**
      * Posting a new status
      *
      * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#posting-a-new-status

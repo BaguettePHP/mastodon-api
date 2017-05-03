@@ -13,6 +13,7 @@ use Baguette\Mastodon\Service\SessionStorage;
  * @method Entity\Account fetchAccount(int $id)
  * @method Entity\Account getAccountCurrentUser()
  * @method Entity\Account updateAccount(array $update_data)
+ * @method Entity\Account[] getAccountFollowers(int $account_id)
  * @method Entity\Account postStatus(Service\Toot $toot)
  */
 final class Mastodon
