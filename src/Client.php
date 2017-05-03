@@ -54,6 +54,14 @@ final class Client
     }
 
     /**
+     * @return void
+     */
+    public function setAPIHttpClient(\GuzzleHttp\Client $client)
+    {
+        $this->api_http_client = $client;
+    }
+
+    /**
      * @return \GuzzleHttp\Client
      */
     private function getAPIHttpClient()
