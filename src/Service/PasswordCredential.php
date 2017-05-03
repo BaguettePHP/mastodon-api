@@ -2,7 +2,7 @@
 
 namespace Baguette\Mastodon\Service;
 
-use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface as Client;
 
 class PasswordCredential extends Credential
 {
@@ -22,9 +22,10 @@ class PasswordCredential extends Credential
     }
 
     /**
-     * @param Client      $http
-     * @param AuthFactory $factory
-     * @param Scope       $scope
+     * @param  Client      $http
+     * @param  AuthFactory $factory
+     * @param  Scope       $scope
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function auth(Client $http, AuthFactory $factory, Scope $scope)
     {

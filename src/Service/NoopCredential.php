@@ -2,7 +2,7 @@
 
 namespace Baguette\Mastodon\Service;
 
-use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface as Client;
 
 class NoopCredential extends Credential
 {
