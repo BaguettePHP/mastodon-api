@@ -8,10 +8,9 @@
     </testsuite>
   </testsuites>
   <filter>
-    <blacklist>
-      <directory suffix=".php">./vendor</directory>
-    </blacklist>
-    <exclude></exclude>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">./src</directory>
+    </whitelist>
   </filter>
   <logging>
     <log type="coverage-html" target="build/report/coverage" />
