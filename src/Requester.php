@@ -12,6 +12,7 @@ use Respect\Validation\Validator as v;
 /**
  * Mastodon Anthorization object factory
  *
+ * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md
  * @author    USAMI Kenta <tadsan@zonu.me>
  * @copyright 2017 Baguette HQ
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
@@ -19,6 +20,9 @@ use Respect\Validation\Validator as v;
 class Requester
 {
     /**
+     * Fetching an account
+     *
+     * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#fetching-an-account
      * @param  Client         $client
      * @param  SessionStorage $session
      * @param  int            $id
@@ -33,6 +37,9 @@ class Requester
     }
 
     /**
+     * Getting the current user
+     *
+     * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#getting-the-current-user
      * @param  Client         $client
      * @param  SessionStorage $session
      * @return ResponseInterface
@@ -46,6 +53,9 @@ class Requester
     }
 
     /**
+     * Updating the current user
+     *
+     * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user
      * @param  Client         $client
      * @param  SessionStorage $session
      * @param  array          $update_data
@@ -74,6 +84,9 @@ class Requester
     }
 
     /**
+     * Posting a new status
+     *
+     * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#posting-a-new-status
      * @param Toot $toot
      */
     public static function postStatus(Client $client, SessionStorage $session, Toot $toot)
