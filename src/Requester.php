@@ -26,10 +26,12 @@ class Requester
      * @param  Client         $client
      * @param  SessionStorage $session
      * @param  int            $id
-     * @return ResponseInterface
+     * @return Entity\Account
      */
     public static function getAccount(Client $client, SessionStorage $session, $id)
     {
+        v::intVal()->min(0)->assert($id);
+
         return static::map(
             Entity\Account::class,
             $client->requestAPI('GET', sprintf('/api/v1/accounts/%d', $id), [], $session)
@@ -42,7 +44,7 @@ class Requester
      * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#getting-the-current-user
      * @param  Client         $client
      * @param  SessionStorage $session
-     * @return ResponseInterface
+     * @return Entity\Account
      */
     public static function getAccountCurrentUser(Client $client, SessionStorage $session)
     {
@@ -59,7 +61,7 @@ class Requester
      * @param  Client         $client
      * @param  SessionStorage $session
      * @param  array          $update_data
-     * @return ResponseInterface
+     * @return Entity\Account
      */
     public static function updateAccount(Client $client, SessionStorage $session, $update_data)
     {
@@ -88,6 +90,7 @@ class Requester
      *
      * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#posting-a-new-status
      * @param Toot $toot
+     * @return Entity\Account
      */
     public static function postStatus(Client $client, SessionStorage $session, Toot $toot)
     {
