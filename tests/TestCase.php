@@ -34,4 +34,17 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
             return $ref->invokeArgs($obj, $args);
         };
     }
+
+    /**
+     * @param string $body
+     */
+    public static function mkstream($body)
+    {
+        $fp = fopen('php://temp', 'rw');
+
+        fwrite($fp, $body);
+        rewind($fp);
+
+        return $fp;
+    }
 }
