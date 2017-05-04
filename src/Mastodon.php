@@ -20,6 +20,9 @@ use Baguette\Mastodon\Service\SessionStorage;
  */
 final class Mastodon
 {
+    use \Teto\Object\PrivateGetter;
+    use \Teto\Object\ReadOnly;
+
     /** @var Client */
     private $client;
     /** @var SessionStorage */
