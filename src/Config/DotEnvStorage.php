@@ -204,7 +204,7 @@ class DotEnvStorage extends \Dotenv\Loader implements Storage
                 continue;
             }
 
-            list($key, $val) = $this->normaliseEnvironmentVariable($line, null);
+            list($key, $val) = $this->normaliseEnvironmentVariable($line, '');
 
             if (isset($tbl[$key]) && isset($this->save_values[$tbl[$key]])) {
                 $saveval = $this->save_values[$tbl[$key]];
