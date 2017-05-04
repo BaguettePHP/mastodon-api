@@ -31,6 +31,14 @@ class ScopeTest extends \Baguette\Mastodon\TestCase
                 'input' => 'read write',
                 'expected' => new Scope(['read', 'write']),
             ],
+            [
+                'input' => ['read', 'write'],
+                'expected' => new Scope(['read', 'write']),
+            ],
+            [
+                'input' => new Scope(['read', 'write']),
+                'expected' => new Scope(['read', 'write']),
+            ],
         ];
     }
 }
