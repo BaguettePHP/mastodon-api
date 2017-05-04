@@ -8,6 +8,7 @@
         "respect/validation": "^1.1"
     },
     "require-dev": {
+        "vlucas/phpdotenv": "^2.4",
         "phpunit/phpunit": "^4.8"
     },
     "autoload": {
@@ -20,5 +21,8 @@
         "psr-4": {
             "Baguette\\Mastodon\\": "tests/"
         }
+    },
+    "suggest": {
+        "vlucas/phpdotenv": "Load .env format config file"
     }
 }
