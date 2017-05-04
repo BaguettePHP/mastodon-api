@@ -148,6 +148,42 @@ class Requester
         );
     }
 
+    /**
+     * Fetching a user's favourites
+     *
+     * @see https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user
+     * @param  Client         $client
+     * @param  SessionStorage $session
+     * @param  array          $options
+     * @return Entity\Status[]
+     */
+    public static function getFavourites(Client $client, SessionStorage $session, $options = [])
+    {
+        $query = [];
+
+        if (isset($options['max_id'])) {
+            v::intVal()->min(0)->assert($options['max_id']);
+            $query['max_id'] = $options['max_id'];
+        }
+
+        if (isset($options['since_id'])) {
+            v::intVal()->min(0)->assert($options['since_id']);
+            $query['since_id'] = $options['since_id'];
+        }
+
+        if (isset($options['limit'])) {
+            v::intVal()->min(0)->assert($options['limit']);
+            $query['limit'] = $options['limit'];
+        }
+
+        return static::map(
+            [Entity\Status::class],
+            $client->requestAPI('GET', '/api/v1/favourites', [
+                'query' => $query,
+            ], $session)
+        );
+    }
+
     //
     // Status API
     //

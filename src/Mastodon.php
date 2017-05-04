@@ -15,6 +15,7 @@ use Baguette\Mastodon\Service\SessionStorage;
  * @method Entity\Account updateAccount(array $update_data)
  * @method Entity\Account[] getAccountFollowers(int $account_id)
  * @method Entity\Account[] getBlocks(array $options = [])
+ * @method Entity\Status[] getFavourites(array $options = [])
  * @method Entity\Account postStatus(Service\Toot $toot)
  */
 final class Mastodon
