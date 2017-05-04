@@ -19,6 +19,10 @@ use Respect\Validation\Validator as v;
  */
 class Requester
 {
+    //
+    // Account API
+    //
+
     /**
      * Fetching an account
      *
@@ -108,6 +112,10 @@ class Requester
         );
     }
 
+    //
+    // Status API
+    //
+
     /**
      * Posting a new status
      *
@@ -144,6 +152,10 @@ class Requester
             ], $session)
         );
     }
+
+    //
+    // Utility method
+    //
 
     /**
      * @param  string|string[]   $class
