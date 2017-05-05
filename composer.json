@@ -9,6 +9,7 @@
     },
     "require-dev": {
         "vlucas/phpdotenv": "^2.4",
+        "phpmd/phpmd": "^2.6",
         "phpunit/phpunit": "^4.8"
     },
     "autoload": {
@@ -24,5 +25,8 @@
     },
     "suggest": {
         "vlucas/phpdotenv": "Load .env format config file"
+    },
+    "scripts": {
+        "phpmd": "phpmd src/ text phpmd.xml"
     }
 }
