@@ -38,19 +38,20 @@ class SessionStorage
      */
     public function getAccessToken()
     {
-        if ($this->authorization === null) {
-            $this->authorize();
-        }
+        $this->authorize();
 
         return $this->authorization->access_token;
     }
 
     /**
+     * @param  bool $force
      * @return Authorization
      */
-    public function authorize()
+    public function authorize($force = false)
     {
-        $this->authorization = $this->auth_factory->authorize($this->scope);
+        if ($force || $this->authorization === null) {
+            $this->authorization = $this->auth_factory->authorize($this->scope);
+        }
 
         return $this->authorization;
     }
