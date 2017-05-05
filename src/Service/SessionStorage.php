@@ -51,6 +51,8 @@ class SessionStorage
     public function authorize()
     {
         $this->authorization = $this->auth_factory->authorize($this->scope);
+
+        return $this->authorization;
     }
 
     /**
