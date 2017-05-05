@@ -6,7 +6,25 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/?branch=master)
 [![Code Climate](https://codeclimate.com/github/BaguettePHP/mastodon-api.svg)](https://codeclimate.com/github/BaguettePHP/mastodon-api)
 
+## Installation
+
+```
+$ composer require baguette/mastodon-api
+```
+
+## Requires
+
+* PHP 5.5, 5.6, 7.0, 7.1, HHVM
+* [Composer](https://getcomposer.org/)
+
+## Features
+
+* IDE (PhpStorm) friendly class/function definitions
+* Support [multiparadigm programming](https://en.wikipedia.org/wiki/Programming_paradigm) style (procedural vs OOP)
+
 ## Usage
+
+### Simple procedural style
 
 ```php
 <?php
@@ -27,6 +45,7 @@ $account = $service->getAccount(42);
 // Toot!
 $status = $service->postStatus(m\toot('トゥートゥー'));
 ```
+
 ## Status of implementations
 
 * [x] GET /api/v1/accounts/:id `Account Mastodon::getAccount(int $id)`
@@ -73,12 +92,6 @@ $status = $service->postStatus(m\toot('トゥートゥー'));
 * [ ] GET /api/v1/timelines/home
 * [ ] GET /api/v1/timelines/public
 * [ ] GET /api/v1/timelines/tag/:hashtag
-
-## Installation
-
-```
-$ composer require baguette/mastodon-api
-```
 
 Copyright
 ---------
