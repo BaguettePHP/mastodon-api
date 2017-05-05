@@ -187,17 +187,21 @@ class DotEnvStorage extends \Dotenv\Loader implements Storage
 
         $tbl = array_flip($this->key_names);
 
+        $opend_file = false;
         if (is_string($this->file_path)) {
-            $fp = fopen($this->file_path, 'brw');
+            $fp = fopen($this->file_path, 'rwb');
+            $opend_file = true;
         } else {
             $fp = $this->file_path;
             rewind($fp);
         }
 
-        flock($fp, LOCK_EX);
-
         $lines = $this->getLines($fp);
-        rewind($fp);
+        $orig_lines = $lines;
+
+        if ($opend_file) {
+            fclose($fp);
+        }
 
         foreach ($lines as $i => $line) {
             if ($this->isComment($line) || !$this->looksLikeSetter($line)) {
@@ -217,9 +221,17 @@ class DotEnvStorage extends \Dotenv\Loader implements Storage
             $lines[] = sprintf('%s=%s', $this->key_names[$key], $this->quoteValue($saveval));
         }
 
-        fflush($fp);
-        fwrite($fp, implode("\n", $lines) . "\n");
-        flock($fp, LOCK_UN);
+        // noop
+        if ($orig_lines === $lines) {
+            return;
+        }
+
+        if ($opend_file) {
+            file_put_contents($this->file_path, implode("\n", $lines) . "\n");
+        } else {
+            rewind($fp);
+            fwrite($fp, implode("\n", $lines) . "\n");
+        }
     }
 
     /**

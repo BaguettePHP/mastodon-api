@@ -165,8 +165,7 @@ Foo="Fizz\"Buzz"
             [
                 'file' => $this->mkstream(''),
                 'set_values' => [],
-                'expected' => '
-',
+                'expected' => '',
             ],
             [
                 'file' => $this->mkstream(''),
