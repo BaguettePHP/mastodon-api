@@ -27,6 +27,7 @@
         "vlucas/phpdotenv": "Load .env format config file"
     },
     "scripts": {
-        "phpmd": "phpmd src/ text phpmd.xml"
+        "phpmd": "phpmd src/ text phpmd.xml",
+        "test": "phpunit"
     }
 }
