@@ -40,7 +40,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      */
     public static function mkstream($body)
     {
-        $fp = fopen('php://temp', 'rw');
+        $fp = fopen('php://temp', 'brw');
 
         fwrite($fp, $body);
         rewind($fp);
