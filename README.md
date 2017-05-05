@@ -4,6 +4,7 @@
 [![Packagist](http://img.shields.io/packagist/dt/zonuexe/mastodon-api.svg?style=flat)](https://packagist.org/packages/zonuexe/mastodon-api)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/?branch=master)
+[![Code Climate](https://codeclimate.com/github/BaguettePHP/mastodon-api.svg)](https://codeclimate.com/github/BaguettePHP/mastodon-api)
 
 ## Usage
 
