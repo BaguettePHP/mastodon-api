@@ -1,0 +1,12 @@
+checks:
+    php:
+        code_rating: true
+        duplication: true
+build:
+    tests:
+        override:
+            -
+                command: 'vendor/bin/phpunit'
+                coverage:
+                    file: 'build/logs/clover.xml'
+                    format: 'clover'
