@@ -2,6 +2,9 @@
 
 namespace Baguette\Mastodon\Config;
 
+use Baguette\Mastodon;
+use Baguette\Mastodon\Service\Authorization;
+use Baguette\Mastodon\Service\Scope;
 use Respect\Validation\Validator as v;
 
 /**
@@ -29,6 +32,9 @@ class DotEnvStorage extends \Dotenv\Loader implements Storage
         'client_secret' => 'CLIENT_SECRET',
         'username'      => 'USERNAME',
         'password'      => 'PASSWORD',
+        'access_token'  => 'ACCESS_TOKEN',
+        'scope'         => 'SCOPE',
+        'created_at'    => 'CREATED_AT',
     ];
 
     /** @var bool */
@@ -83,6 +89,52 @@ class DotEnvStorage extends \Dotenv\Loader implements Storage
     {
         v::stringType()->not(v::contains("\n"))->assert($app_name);
         $this->save_values['app_name'] = $app_name;
+    }
+
+    /**
+     * @return array
+     */
+    public function getAuthorization()
+    {
+        $token_key = $this->key_names['access_token'];
+        $scope_key = $this->key_names['scope'];
+        $cat_key   = $this->key_names['created_at'];
+
+        $values = $this->getValues();
+
+        return [
+            'access_token' => isset($values[$token_key]) ? $values[$token_key] : null,
+            'scope'        => isset($values[$scope_key]) ? $values[$scope_key] : null,
+            'created_at'   => isset($values[$cat_key])   ? $values[$cat_key]   : null,
+        ];
+    }
+
+    /**
+     * @param  string                $access_token
+     * @param  string|string[]|Scope $scope
+     * @param  int                   $created_at
+     * @return void
+     */
+    public function setAuthorization($access_token, $scope = null, $created_at = null)
+    {
+        v::stringType()->not(v::contains("\n"))->assert($access_token);
+        v::intType()->min(0)->assert($created_at);
+        $this->save_values['access_token'] = $access_token;
+        $this->save_values['scope'] = (string)Mastodon\scope($scope);
+        $this->save_values['created_at'] = $created_at;
+    }
+
+    /**
+     * @param  Authorization $authorization
+     * @return void
+     */
+    public function setAuthorizationFromObject(Authorization $authorization)
+    {
+        $this->setAuthorization(
+            $authorization->access_token,
+            $authorization->scope,
+            $authorization->created_at->getTimestamp()
+        );
     }
 
     /**
