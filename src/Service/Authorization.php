@@ -23,7 +23,7 @@ class Authorization
     private $token_type;
     /** @var Scope */
     private $scope;
-    /** @var \DateTimeImmutable */
+    /** @var \DateTimeImmutable|null */
     private $created_at;
 
     /**
@@ -32,12 +32,18 @@ class Authorization
      * @param string[] $scope
      * @param int      $created_at
      */
-    public function __construct($access_token, $token_type, Scope $scope, $created_at)
-    {
+    public function __construct(
+        $access_token,
+        $token_type = 'bearer',
+        Scope $scope = null,
+        $created_at = null
+    ) {
         $this->access_token = $access_token;
         $this->token_type = $token_type;
         $this->scope      = $scope;
-        $this->created_at = (new \DateTimeImmutable)->setTimeStamp($created_at);
+        if ($created_at !== null) {
+            $this->created_at = (new \DateTimeImmutable)->setTimeStamp($created_at);
+        }
     }
 
     /**
@@ -48,7 +54,7 @@ class Authorization
     {
         return new static(
             $obj->access_token,
-            $obj->token_type,
+            'bearer',
             \Baguette\Mastodon\scope($obj->scope),
             $obj->created_at
         );
