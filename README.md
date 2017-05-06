@@ -35,7 +35,7 @@ $service = m\session(
     'pawoo.net', $client_id, $client_secret,
     [
         'scope' => 'read write follow',
-        'credential' => ['username' => $username, 'password' => $password],
+        'grant' => ['username' => $username, 'password' => $password],
     ]
 );
 
