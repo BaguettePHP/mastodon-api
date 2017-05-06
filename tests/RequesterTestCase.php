@@ -41,7 +41,7 @@ abstract class RequesterTestCase extends TestCase
         $this->auth_factory = new AuthFactory(
             $this->client, static::CLIENT_ID, static::CLIENT_SECRET
         );
-        $this->auth_factory->setCredential(Mastodon\credential([
+        $this->auth_factory->setGrant(Mastodon\grant([
             'username' => static::USERNAME,
             'password' => static::PASSWORD,
         ]));

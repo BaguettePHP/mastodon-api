@@ -1,22 +1,22 @@
 <?php
 
-namespace Baguette\Mastodon\Service;
+namespace Baguette\Mastodon\Grant;
 
 use Baguette\Mastodon;
 
 /**
- * Noop credential
+ * Noop grant
  *
  * @author    USAMI Kenta <tadsan@zonu.me>
  * @copyright 2017 Baguette HQ
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
-class NoopCredentialTest extends \Baguette\Mastodon\RequesterTestCase
+class NoopGrantTest extends \Baguette\Mastodon\RequesterTestCase
 {
     public function test()
     {
-        $actual = new NoopCredential();
-        $this->assertInstanceOf(Credential::class, $actual);
+        $actual = new NoopGrant();
+        $this->assertInstanceOf(Grant::class, $actual);
 
         return $actual;
     }
@@ -25,7 +25,7 @@ class NoopCredentialTest extends \Baguette\Mastodon\RequesterTestCase
      * @depends test
      * @expectedException \RuntimeException
      */
-    public function test_auth_raise_RuntimeException(NoopCredential $actual)
+    public function test_auth_raise_RuntimeException(NoopGrant $actual)
     {
         $actual->auth(Mastodon\http(), $this->auth_factory, Mastodon\scope(''));
     }

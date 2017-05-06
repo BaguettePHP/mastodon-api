@@ -1,17 +1,18 @@
 <?php
 
-namespace Baguette\Mastodon\Service;
+namespace Baguette\Mastodon\Grant;
 
 use Baguette\Mastodon\Client as MastodonClient;
+use Baguette\Mastodon\Service\AuthFactory;
 
 /**
- * Abstract credential
+ * Abstract grant class
  *
  * @author    USAMI Kenta <tadsan@zonu.me>
  * @copyright 2017 Baguette HQ
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
-class CredentialTest extends \Baguette\Mastodon\TestCase
+class GrantTest extends \Baguette\Mastodon\TestCase
 {
     public function test_getPathToOAuthToken()
     {
@@ -19,7 +20,7 @@ class CredentialTest extends \Baguette\Mastodon\TestCase
 
         $client = new MastodonClient('example.com');
 
-        $this->assertEquals($expected, DummyCredential::getPathToOAuthToken($client));
+        $this->assertEquals($expected, DummyGrant::getPathToOAuthToken($client));
     }
 
     public function test_getFormParams()
@@ -33,6 +34,6 @@ class CredentialTest extends \Baguette\Mastodon\TestCase
         $client_secret = 'zxcvbnmasdfghjklpoi';
         $factory = new AuthFactory(new MastodonClient('example.com'), $client_id, $client_secret);
 
-        $this->assertEquals($expected, DummyCredential::getFormParams($factory));
+        $this->assertEquals($expected, DummyGrant::getFormParams($factory));
     }
 }

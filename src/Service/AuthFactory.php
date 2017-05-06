@@ -4,6 +4,7 @@ namespace Baguette\Mastodon\Service;
 
 use Baguette\Mastodon;
 use Baguette\Mastodon\Client;
+use Baguette\Mastodon\Grant\Grant;
 
 /**
  * Mastodon Anthorization object factory
@@ -14,7 +15,7 @@ use Baguette\Mastodon\Client;
  * @property-read Client     $client
  * @property-read string     $client_id
  * @property-read string     $client_secret
- * @property-read Credential $credential
+ * @property-read Grant      $grant
  * @property-read Scope      $scope
  */
 class AuthFactory
@@ -27,8 +28,8 @@ class AuthFactory
     private $client_id;
     /** @var string */
     private $client_secret;
-    /** @var Credential */
-    private $credential;
+    /** @var Grant */
+    private $grant;
 
     /**
      * @param Client $client
@@ -43,11 +44,11 @@ class AuthFactory
     }
 
     /**
-     * @param Credential $credential
+     * @param Grant $grant
      */
-    public function setCredential(Credential $credential)
+    public function setGrant(Grant $grant)
     {
-        $this->credential = $credential;
+        $this->grant = $grant;
     }
 
     /**
@@ -55,7 +56,7 @@ class AuthFactory
      */
     public function authorize(Scope $scope)
     {
-        $res = $this->credential->auth(Mastodon\http(), $this, $scope);
+        $res = $this->grant->auth(Mastodon\http(), $this, $scope);
 
         if ($res->getStatusCode() !== 200) {
             throw new AuthorizationException;

@@ -1,8 +1,10 @@
 <?php
 
-namespace Baguette\Mastodon\Service;
+namespace Baguette\Mastodon\Grant;
 
 use Baguette\Mastodon\Client as MastodonClient;
+use Baguette\Mastodon\Service\AuthFactory;
+use Baguette\Mastodon\Service\Scope;
 use GuzzleHttp\ClientInterface as GuzzleHttpClient;
 
 /**
@@ -12,7 +14,7 @@ use GuzzleHttp\ClientInterface as GuzzleHttpClient;
  * @copyright 2017 Baguette HQ
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
-final class DummyCredential extends Credential
+final class DummyGrant extends Grant
 {
     /**
      * @param  Client      $http

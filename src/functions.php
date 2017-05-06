@@ -10,6 +10,7 @@
 
 namespace Baguette\Mastodon;
 
+use Baguette\Mastodon\Grant;
 use Baguette\Mastodon\Service;
 use Baguette\Mastodon\Service\Scope;
 
@@ -23,7 +24,7 @@ use Baguette\Mastodon\Service\Scope;
 function session($instance, $client_id, $client_secret, array $options)
 {
     $scope = null;
-    $credential = null;
+    $grant = null;
     $authorization = null;
 
     $client = new Client($instance);
@@ -32,8 +33,8 @@ function session($instance, $client_id, $client_secret, array $options)
         $scope = scope($options['scope']);
     }
 
-    if (isset($options['credential'])) {
-        $credential = credential($options['credential']);
+    if (isset($options['grant'])) {
+        $grant = grant($options['grant']);
     }
 
     if (isset($options['authorization'])) {
@@ -43,8 +44,8 @@ function session($instance, $client_id, $client_secret, array $options)
     //throw new \LogicException('"scope" is not set.');
 
     $auth_factory = new Service\AuthFactory($client, $client_id, $client_secret);
-    if ($credential !== null) {
-        $auth_factory->setCredential($credential);
+    if ($grant !== null) {
+        $auth_factory->setGrant($grant);
     }
 
     $session = new Service\SessionStorage($auth_factory, $scope);
@@ -81,12 +82,12 @@ function toot($toot_string, array $options = [])
 }
 
 /**
- * @return Service\Credential
+ * @return Grant\Grant
  */
-function credential(array $data)
+function grant(array $data)
 {
     if (isset($data['username'], $data['password'])) {
-        return new Service\PasswordCredential($data['username'], $data['password']);
+        return new Grant\PasswordCredential($data['username'], $data['password']);
     }
 }
 

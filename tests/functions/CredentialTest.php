@@ -2,8 +2,8 @@
 
 namespace Baguette\Mastodon\functions;
 
-use Baguette\Mastodon\Service\Credential;
-use Baguette\Mastodon\Service\PasswordCredential;
+use Baguette\Mastodon\Grant;
+use Baguette\Mastodon\Grant\PasswordCredential;
 
 /**
  * credential function
@@ -19,9 +19,9 @@ class CredentialTest extends \Baguette\Mastodon\TestCase
      */
     public function test(array $input, $expected_concrete)
     {
-        $actual = \Baguette\Mastodon\credential($input);
+        $actual = \Baguette\Mastodon\grant($input);
 
-        $this->assertInstanceOf(Credential::class, $actual);
+        $this->assertInstanceOf(Grant\Grant::class, $actual);
         $this->assertInstanceOf($expected_concrete, $actual);
     }
 

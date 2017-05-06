@@ -1,10 +1,19 @@
 <?php
 
-namespace Baguette\Mastodon\Service;
+namespace Baguette\Mastodon\Grant;
 
+use Baguette\Mastodon\Service\AuthFactory;
+use Baguette\Mastodon\Service\Scope;
 use GuzzleHttp\ClientInterface as Client;
 
-class PasswordCredential extends Credential
+/**
+ * Mastodon password credential grant
+ *
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2017 Baguette HQ
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
+ */
+class PasswordCredential extends Grant
 {
     /** @var string */
     private $username;
