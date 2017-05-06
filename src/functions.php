@@ -33,6 +33,11 @@ function session($instance, $client_id, $client_secret, array $options)
         $scope = scope($options['scope']);
     }
 
+    if (isset($options['credential'])) {
+        trigger_error('`credential` is obsolete option.  Use `grant` instead.', E_USER_DEPRECATED);
+        $grant = credential($options['credential']);
+    }
+
     if (isset($options['grant'])) {
         $grant = grant($options['grant']);
     }
@@ -79,6 +84,15 @@ function scope($scope)
 function toot($toot_string, array $options = [])
 {
     return new Service\Toot($toot_string, $options);
+}
+
+/**
+ * @deprecated
+ */
+function credential(array $data)
+{
+    trigger_error('credential() is obsolete function.  Use grant() instead.', E_USER_DEPRECATED);
+    return grant($data);
 }
 
 /**
