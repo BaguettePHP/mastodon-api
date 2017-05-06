@@ -21,7 +21,7 @@ class SessionTest extends \Baguette\Mastodon\TestCase
             'xxxxxxxx', 'yyyyyyyy',
             [
                 'scope' => 'read',
-                'credential' => [
+                'grant' => [
                     'username' => 'sample',
                     'password' => 'xyzxyz',
                 ],
