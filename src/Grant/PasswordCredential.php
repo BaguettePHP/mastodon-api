@@ -44,7 +44,7 @@ class PasswordCredential extends Grant
                 'username' => $this->username,
                 'password' => $this->password,
                 'scope' => (string)$scope,
-            ] + static::getFormParams($factory),
+            ] + static::getFormParamsWithSecret($factory),
         ]);
     }
 }

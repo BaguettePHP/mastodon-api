@@ -38,8 +38,16 @@ abstract class Grant
     {
         return [
             'client_id'     => $factory->client_id,
-            'client_secret' => $factory->client_secret,
         ];
     }
 
+    /**
+     * @return array
+     */
+    protected static function getFormParamsWithSecret(AuthFactory $factory)
+    {
+        return $this->getFormParams($factory) + [
+            'client_secret' => $factory->client_secret,
+        ];
+    }
 }
