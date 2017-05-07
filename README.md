@@ -2,6 +2,7 @@
 
 [![Package version](http://img.shields.io/packagist/v/zonuexe/mastodon-api.svg?style=flat)](https://packagist.org/packages/zonuexe/mastodon-api)
 [![Packagist](http://img.shields.io/packagist/dt/zonuexe/mastodon-api.svg?style=flat)](https://packagist.org/packages/zonuexe/mastodon-api)
+[![Build Status](https://travis-ci.org/BaguettePHP/mastodon-api.svg?branch=master)](https://travis-ci.org/BaguettePHP/mastodon-api)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/BaguettePHP/mastodon-api/?branch=master)
 [![Code Climate](https://codeclimate.com/github/BaguettePHP/mastodon-api.svg)](https://codeclimate.com/github/BaguettePHP/mastodon-api)
