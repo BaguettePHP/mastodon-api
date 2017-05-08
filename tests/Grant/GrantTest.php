@@ -27,7 +27,6 @@ class GrantTest extends \Baguette\Mastodon\TestCase
     {
         $expected = [
             'client_id'     => 'qawsedrftgyhujikolp',
-            'client_secret' => 'zxcvbnmasdfghjklpoi',
         ];
 
         $client_id     = 'qawsedrftgyhujikolp';
@@ -35,5 +34,20 @@ class GrantTest extends \Baguette\Mastodon\TestCase
         $factory = new AuthFactory(new MastodonClient('example.com'), $client_id, $client_secret);
 
         $this->assertEquals($expected, DummyGrant::getFormParams($factory));
+    }
+
+
+    public function test_getFormParamsWithSecret()
+    {
+        $expected = [
+            'client_id'     => 'qawsedrftgyhujikolp',
+            'client_secret' => 'zxcvbnmasdfghjklpoi',
+        ];
+
+        $client_id     = 'qawsedrftgyhujikolp';
+        $client_secret = 'zxcvbnmasdfghjklpoi';
+        $factory = new AuthFactory(new MastodonClient('example.com'), $client_id, $client_secret);
+
+        $this->assertEquals($expected, DummyGrant::getFormParamsWithSecret($factory));
     }
 }
