@@ -46,7 +46,7 @@ abstract class Grant
      */
     protected static function getFormParamsWithSecret(AuthFactory $factory)
     {
-        return $this->getFormParams($factory) + [
+        return static::getFormParams($factory) + [
             'client_secret' => $factory->client_secret,
         ];
     }
