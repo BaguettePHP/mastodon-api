@@ -36,4 +36,9 @@ final class DummyGrant extends Grant
     {
         return parent::getFormParams($factory);
     }
+
+    public static function getFormParamsWithSecret(AuthFactory $factory)
+    {
+        return parent::getFormParamsWithSecret($factory);
+    }
 }
