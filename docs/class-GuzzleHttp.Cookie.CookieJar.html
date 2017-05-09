@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class GuzzleHttp\Cookie\CookieJar | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li class="active">
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-GuzzleHttp.Cookie.CookieJar.html">CookieJar</a></li>
+				<li><a href="class-GuzzleHttp.Cookie.FileCookieJar.html">FileCookieJar</a></li>
+				<li><a href="class-GuzzleHttp.Cookie.SessionCookieJar.html">SessionCookieJar</a></li>
+				<li><a href="class-GuzzleHttp.Cookie.SetCookie.html">SetCookie</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html">CookieJarInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-GuzzleHttp.Cookie.html" title="Summary of GuzzleHttp\Cookie"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CookieJar</h1>
+
+
+	<div class="description">
+	<p>Cookie jar that stores cookies as an array</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>GuzzleHttp\Cookie\CookieJar</span></b>			
+			 implements 
+				<a href="class-GuzzleHttp.Cookie.CookieJarInterface.html"><span>GuzzleHttp\Cookie\CookieJarInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-GuzzleHttp.Cookie.FileCookieJar.html">GuzzleHttp\Cookie\FileCookieJar</a>, 
+			<a href="class-GuzzleHttp.Cookie.SessionCookieJar.html">GuzzleHttp\Cookie\SessionCookieJar</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-GuzzleHttp.html">GuzzleHttp</a>\<a href="namespace-GuzzleHttp.Cookie.html">Cookie</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-GuzzleHttp.Cookie.CookieJar.html#7-265" title="Go to source code">Cookie/CookieJar.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#18-35" title="Go to source code">__construct</a>( <span>boolean <var>$strictMode</var> = <span class="php-keyword1">false</span></span>, <span>array <var>$cookieArray</var> = []</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$strictMode</var></dt>
+					<dd><p>Set to true to throw exceptions when invalid
+                          cookies are added to the cookie jar.</p></dd>
+					<dt><var>$cookieArray</var></dt>
+					<dd><p>Array of SetCookie objects or a hash of
+                          arrays that can be used with the SetCookie
+                          constructor</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fromArray" id="_fromArray">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-GuzzleHttp.Cookie.CookieJar.html">GuzzleHttp\Cookie\CookieJar</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fromArray">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#37-58" title="Go to source code">fromArray</a>( <span>array <var>$cookies</var></span>, <span>string <var>$domain</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a new Cookie jar from an associative array and domain.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new Cookie jar from an associative array and domain.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookies</var></dt>
+					<dd>Cookies to create the jar from</dd>
+					<dt><var>$domain</var></dt>
+					<dd>Domain to set the cookies to</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-GuzzleHttp.Cookie.CookieJar.html">GuzzleHttp\Cookie\CookieJar</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCookieValue" id="_getCookieValue" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCookieValue">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#60-66" title="Go to source code">getCookieValue</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+				<h4>Deprecated</h4>
+				<div class="list">
+				</div>
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shouldPersist" id="_shouldPersist">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shouldPersist">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#68-87" title="Go to source code">shouldPersist</a>( <span><code><a href="class-GuzzleHttp.Cookie.SetCookie.html">GuzzleHttp\Cookie\SetCookie</a></code> <var>$cookie</var></span>, <span>boolean <var>$allowSessionCookies</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+		<div class="description short">
+			<p>Evaluate if this cookie should be persisted to storage
+that survives between requests.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Evaluate if this cookie should be persisted to storage
+that survives between requests.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookie</var></dt>
+					<dd>Being evaluated.</dd>
+					<dt><var>$allowSessionCookies</var></dt>
+					<dd>If we should persist session cookies</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#89-94" title="Go to source code">toArray</a>( )</code>
+
+		<div class="description short">
+			<p>Converts the cookie jar to an array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Converts the cookie jar to an array.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html#_toArray">GuzzleHttp\Cookie\CookieJarInterface::toArray()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html">GuzzleHttp\Cookie\CookieJarInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#96-126" title="Go to source code">clear</a>( <span>string <var>$domain</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$path</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Remove cookies currently held in the cookie jar.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Remove cookies currently held in the cookie jar.</p>
+
+<p>Invoking this method without arguments will empty the whole cookie jar.
+If given a $domain argument only cookies belonging to that domain will
+be removed. If given a $domain and $path argument, cookies belonging to
+the specified path within that domain are removed. If given all three
+arguments, then the cookie with the specified name, path and domain is
+removed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$domain</var></dt>
+					<dd>Clears cookies matching a domain</dd>
+					<dt><var>$path</var></dt>
+					<dd>Clears cookies matching a domain and path</dd>
+					<dt><var>$name</var></dt>
+					<dd>Clears cookies matching a domain, path, and name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html">GuzzleHttp\Cookie\CookieJarInterface</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html#_clear">GuzzleHttp\Cookie\CookieJarInterface::clear()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearSessionCookies" id="_clearSessionCookies">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearSessionCookies">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#128-136" title="Go to source code">clearSessionCookies</a>( )</code>
+
+		<div class="description short">
+			<p>Discard all sessions cookies.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Discard all sessions cookies.</p>
+
+<p>Removes cookies that don't have an expire field or a have a discard
+field set to true. To be called when the user agent shuts down according
+to RFC 2965.</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html#_clearSessionCookies">GuzzleHttp\Cookie\CookieJarInterface::clearSessionCookies()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCookie" id="_setCookie">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCookie">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#138-197" title="Go to source code">setCookie</a>( <span><code><a href="class-GuzzleHttp.Cookie.SetCookie.html">GuzzleHttp\Cookie\SetCookie</a></code> <var>$cookie</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets a cookie in the cookie jar.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a cookie in the cookie jar.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookie</var></dt>
+					<dd>Cookie to set.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Returns true on success or false on failure
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html#_setCookie">GuzzleHttp\Cookie\CookieJarInterface::setCookie()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#199-202" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Countable::count()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#204-207" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>IteratorAggregate::getIterator()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extractCookies" id="_extractCookies">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extractCookies">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#209-222" title="Go to source code">extractCookies</a>( <span><code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Psr.Http.Message.ResponseInterface.html">Psr\Http\Message\ResponseInterface</a></code> <var>$response</var></span> )</code>
+
+		<div class="description short">
+			<p>Extract cookies from an HTTP response and store them in the CookieJar.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Extract cookies from an HTTP response and store them in the CookieJar.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>Request that was sent</dd>
+					<dt><var>$response</var></dt>
+					<dd>Response that was received</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html#_extractCookies">GuzzleHttp\Cookie\CookieJarInterface::extractCookies()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="withCookieHeader" id="_withCookieHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_withCookieHeader">#</a>
+		<code><a href="source-class-GuzzleHttp.Cookie.CookieJar.html#224-246" title="Go to source code">withCookieHeader</a>( <span><code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code> <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a request with added cookie headers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a request with added cookie headers.</p>
+
+<p>If no matching cookies are found in the cookie jar, then no Cookie
+header is added to the request and the same request is returned.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>Request object to modify.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code><br>returns the modified request.
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html#_withCookieHeader">GuzzleHttp\Cookie\CookieJarInterface::withCookieHeader()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

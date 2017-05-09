@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class GuzzleHttp\Pool | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li class="active">
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.Client.html">Client</a></li>
+				<li><a href="class-GuzzleHttp.HandlerStack.html">HandlerStack</a></li>
+				<li><a href="class-GuzzleHttp.MessageFormatter.html">MessageFormatter</a></li>
+				<li><a href="class-GuzzleHttp.Middleware.html">Middleware</a></li>
+				<li class="active"><a href="class-GuzzleHttp.Pool.html">Pool</a></li>
+				<li><a href="class-GuzzleHttp.PrepareBodyMiddleware.html">PrepareBodyMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RedirectMiddleware.html">RedirectMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RequestOptions.html">RequestOptions</a></li>
+				<li><a href="class-GuzzleHttp.RetryMiddleware.html">RetryMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.TransferStats.html">TransferStats</a></li>
+				<li><a href="class-GuzzleHttp.UriTemplate.html">UriTemplate</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.ClientInterface.html">ClientInterface</a></li>
+			</ul>
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-GuzzleHttp.choose_handler.html">choose_handler</a></li>
+				<li><a href="function-GuzzleHttp.debug_resource.html">debug_resource</a></li>
+				<li><a href="function-GuzzleHttp.default_ca_bundle.html">default_ca_bundle</a></li>
+				<li><a href="function-GuzzleHttp.default_user_agent.html">default_user_agent</a></li>
+				<li><a href="function-GuzzleHttp.describe_type.html">describe_type</a></li>
+				<li><a href="function-GuzzleHttp.headers_from_lines.html">headers_from_lines</a></li>
+				<li><a href="function-GuzzleHttp.is_host_in_noproxy.html">is_host_in_noproxy</a></li>
+				<li><a href="function-GuzzleHttp.json_decode.html">json_decode</a></li>
+				<li><a href="function-GuzzleHttp.json_encode.html">json_encode</a></li>
+				<li><a href="function-GuzzleHttp.normalize_header_keys.html">normalize_header_keys</a></li>
+				<li><a href="function-GuzzleHttp.uri_template.html">uri_template</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-GuzzleHttp.html" title="Summary of GuzzleHttp"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Pool</h1>
+
+
+	<div class="description">
+	<p>Sends and iterator of requests concurrently using a capped pool size.</p>
+
+<p>The pool will read from an iterator until it is cancelled or until the
+iterator is consumed. When a request is yielded, the request is sent after
+applying the "request_options" request options (if provided in the ctor).</p>
+
+<p>When a function is yielded by the iterator, the function is provided the
+"request_options" array that should be merged on top of any existing
+options, and the function MUST then return a wait-able promise.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>GuzzleHttp\Pool</span></b>			
+			 implements 
+				<a href="class-GuzzleHttp.Promise.PromisorInterface.html"><span>GuzzleHttp\Promise\PromisorInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-GuzzleHttp.html">GuzzleHttp</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-GuzzleHttp.Pool.html#8-123" title="Go to source code">Pool.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-GuzzleHttp.Pool.html#24-70" title="Go to source code">__construct</a>( <span><code><a href="class-GuzzleHttp.ClientInterface.html">GuzzleHttp\ClientInterface</a></code> <var>$client</var></span>, <span>array|Iterator <var>$requests</var></span>, <span>array <var>$config</var> = [] </span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd>Client used to send the requests.</dd>
+					<dt><var>$requests</var></dt>
+					<dd><p>Requests or functions that return
+                                 requests to send concurrently.</p></dd>
+					<dt><var>$config</var></dt>
+					<dd><p>Associative array of options
+    - concurrency: (int) Maximum number of requests to send concurrently
+    - options: Array of request options to apply to each request.
+    - fulfilled: (callable) Function to invoke when a request completes.
+    - rejected: (callable) Function to invoke when a request is rejected.</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="promise" id="_promise">
+
+		<td class="attributes"><code>
+			 public 
+
+			PromiseInterface
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_promise">#</a>
+		<code><a href="source-class-GuzzleHttp.Pool.html#72-75" title="Go to source code">promise</a>( )</code>
+
+		<div class="description short">
+			<p>Returns a promise.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a promise.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					PromiseInterface
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-GuzzleHttp.Promise.PromisorInterface.html#_promise">GuzzleHttp\Promise\PromisorInterface::promise()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="batch" id="_batch">
+
+		<td class="attributes"><code>
+			 public static
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_batch">#</a>
+		<code><a href="source-class-GuzzleHttp.Pool.html#77-107" title="Go to source code">batch</a>( <span><code><a href="class-GuzzleHttp.ClientInterface.html">GuzzleHttp\ClientInterface</a></code> <var>$client</var></span>, <span>array|Iterator <var>$requests</var></span>, <span>array <var>$options</var> = [] </span> )</code>
+
+		<div class="description short">
+			<p>Sends multiple requests concurrently and returns an array of responses
+and exceptions that uses the same ordering as the provided requests.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends multiple requests concurrently and returns an array of responses
+and exceptions that uses the same ordering as the provided requests.</p>
+
+<p>IMPORTANT: This method keeps every request and response in memory, and
+as such, is NOT recommended when sending a large number or an
+indeterminate number of requests concurrently.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd>Client used to send the requests</dd>
+					<dt><var>$requests</var></dt>
+					<dd>Requests to send concurrently.</dd>
+					<dt><var>$options</var></dt>
+					<dd><p>Passes through the options available in
+                                 GuzzleHttp\Pool::__construct</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>Returns an array containing the response or an exception
+              in the same order that the requests were sent.</p>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					InvalidArgumentException<br>if the event format is incorrect.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

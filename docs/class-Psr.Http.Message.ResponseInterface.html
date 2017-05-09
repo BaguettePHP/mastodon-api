@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Interface Psr\Http\Message\ResponseInterface | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li class="active">
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Psr.Http.Message.MessageInterface.html">MessageInterface</a></li>
+				<li><a href="class-Psr.Http.Message.RequestInterface.html">RequestInterface</a></li>
+				<li class="active"><a href="class-Psr.Http.Message.ResponseInterface.html">ResponseInterface</a></li>
+				<li><a href="class-Psr.Http.Message.ServerRequestInterface.html">ServerRequestInterface</a></li>
+				<li><a href="class-Psr.Http.Message.StreamInterface.html">StreamInterface</a></li>
+				<li><a href="class-Psr.Http.Message.UploadedFileInterface.html">UploadedFileInterface</a></li>
+				<li><a href="class-Psr.Http.Message.UriInterface.html">UriInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Psr.Http.Message.html" title="Summary of Psr\Http\Message"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface ResponseInterface</h1>
+
+
+	<div class="description">
+	<p>Representation of an outgoing, server-side response.</p>
+
+<p>Per the HTTP specification, this interface includes properties for
+each of the following:</p>
+
+<ul>
+<li>Protocol version</li>
+<li>Status code and reason phrase</li>
+<li>Headers</li>
+<li>Message body</li>
+</ul>
+
+<p>Responses are considered immutable; all methods that might change state MUST
+be implemented such that they retain the internal state of the current
+message and return an instance that contains the changed state.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Psr\Http\Message\ResponseInterface</span></b>			
+			 implements 
+				<a href="class-Psr.Http.Message.MessageInterface.html"><span>Psr\Http\Message\MessageInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Psr.html">Psr</a>\<a href="namespace-Psr.Http.html">Http</a>\<a href="namespace-Psr.Http.Message.html">Message</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Psr.Http.Message.ResponseInterface.html#5-68" title="Go to source code">ResponseInterface.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getStatusCode" id="_getStatusCode">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStatusCode">#</a>
+		<code><a href="source-class-Psr.Http.Message.ResponseInterface.html#22-30" title="Go to source code">getStatusCode</a>( )</code>
+
+		<div class="description short">
+			<p>Gets the response status code.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the response status code.</p>
+
+<p>The status code is a 3-digit integer result code of the server's attempt
+to understand and satisfy the request.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>Status code.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="withStatus" id="_withStatus">
+
+		<td class="attributes"><code>
+			 public 
+
+			static
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_withStatus">#</a>
+		<code><a href="source-class-Psr.Http.Message.ResponseInterface.html#32-52" title="Go to source code">withStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$reasonPhrase</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			<p>Return an instance with the specified status code and, optionally, reason phrase.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return an instance with the specified status code and, optionally, reason phrase.</p>
+
+<p>If no reason phrase is specified, implementations MAY choose to default
+to the RFC 7231 or IANA recommended reason phrase for the response's
+status code.</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that has the
+updated status and reason phrase.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd>The 3-digit integer result code to set.</dd>
+					<dt><var>$reasonPhrase</var></dt>
+					<dd><p>The reason phrase to use with the
+    provided status code; if none is provided, implementations MAY
+    use the defaults as suggested in the HTTP specification.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					static
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					InvalidArgumentException<br>For invalid status code arguments.
+				</div>
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://tools.ietf.org/html/rfc7231#section-6">http://tools.ietf.org/html/rfc7231#section-6</a><br>
+						<a href="http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReasonPhrase" id="_getReasonPhrase">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReasonPhrase">#</a>
+		<code><a href="source-class-Psr.Http.Message.ResponseInterface.html#54-67" title="Go to source code">getReasonPhrase</a>( )</code>
+
+		<div class="description short">
+			<p>Gets the response reason phrase associated with the status code.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the response reason phrase associated with the status code.</p>
+
+<p>Because a reason phrase is not a required element in a response
+status line, the reason phrase value MAY be null. Implementations MAY
+choose to return the default RFC 7231 recommended reason phrase (or those
+listed in the IANA HTTP Status Code Registry) for the response's
+status code.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Reason phrase; must return an empty string if none present.
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://tools.ietf.org/html/rfc7231#section-6">http://tools.ietf.org/html/rfc7231#section-6</a><br>
+						<a href="http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Psr.Http.Message.MessageInterface.html#methods">Psr\Http\Message\MessageInterface</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Psr.Http.Message.MessageInterface.html#_getBody">getBody()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_getHeader">getHeader()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_getHeaderLine">getHeaderLine()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_getHeaders">getHeaders()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_getProtocolVersion">getProtocolVersion()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_hasHeader">hasHeader()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_withAddedHeader">withAddedHeader()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_withBody">withBody()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_withHeader">withHeader()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_withProtocolVersion">withProtocolVersion()</a>, 
+			<a href="class-Psr.Http.Message.MessageInterface.html#_withoutHeader">withoutHeader()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

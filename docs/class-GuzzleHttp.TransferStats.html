@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class GuzzleHttp\TransferStats | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li class="active">
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.Client.html">Client</a></li>
+				<li><a href="class-GuzzleHttp.HandlerStack.html">HandlerStack</a></li>
+				<li><a href="class-GuzzleHttp.MessageFormatter.html">MessageFormatter</a></li>
+				<li><a href="class-GuzzleHttp.Middleware.html">Middleware</a></li>
+				<li><a href="class-GuzzleHttp.Pool.html">Pool</a></li>
+				<li><a href="class-GuzzleHttp.PrepareBodyMiddleware.html">PrepareBodyMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RedirectMiddleware.html">RedirectMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RequestOptions.html">RequestOptions</a></li>
+				<li><a href="class-GuzzleHttp.RetryMiddleware.html">RetryMiddleware</a></li>
+				<li class="active"><a href="class-GuzzleHttp.TransferStats.html">TransferStats</a></li>
+				<li><a href="class-GuzzleHttp.UriTemplate.html">UriTemplate</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.ClientInterface.html">ClientInterface</a></li>
+			</ul>
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-GuzzleHttp.choose_handler.html">choose_handler</a></li>
+				<li><a href="function-GuzzleHttp.debug_resource.html">debug_resource</a></li>
+				<li><a href="function-GuzzleHttp.default_ca_bundle.html">default_ca_bundle</a></li>
+				<li><a href="function-GuzzleHttp.default_user_agent.html">default_user_agent</a></li>
+				<li><a href="function-GuzzleHttp.describe_type.html">describe_type</a></li>
+				<li><a href="function-GuzzleHttp.headers_from_lines.html">headers_from_lines</a></li>
+				<li><a href="function-GuzzleHttp.is_host_in_noproxy.html">is_host_in_noproxy</a></li>
+				<li><a href="function-GuzzleHttp.json_decode.html">json_decode</a></li>
+				<li><a href="function-GuzzleHttp.json_encode.html">json_encode</a></li>
+				<li><a href="function-GuzzleHttp.normalize_header_keys.html">normalize_header_keys</a></li>
+				<li><a href="function-GuzzleHttp.uri_template.html">uri_template</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-GuzzleHttp.html" title="Summary of GuzzleHttp"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TransferStats</h1>
+
+
+	<div class="description">
+	<p>Represents data at the point after it was transferred either successfully
+or after a network error.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-GuzzleHttp.html">GuzzleHttp</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-GuzzleHttp.TransferStats.html#8-126" title="Go to source code">TransferStats.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#20-39" title="Go to source code">__construct</a>( <span><code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Psr.Http.Message.ResponseInterface.html">Psr\Http\Message\ResponseInterface</a></code> <var>$response</var> = <span class="php-keyword1">null</span></span>, <span>null <var>$transferTime</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$handlerErrorData</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$handlerStats</var> = [] </span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>Request that was sent.</dd>
+					<dt><var>$response</var></dt>
+					<dd>Response received (if any)</dd>
+					<dt><var>$transferTime</var></dt>
+					<dd>Total handler transfer time.</dd>
+					<dt><var>$handlerErrorData</var></dt>
+					<dd>Handler error data.</dd>
+					<dt><var>$handlerStats</var></dt>
+					<dd>Handler specific stats.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequest" id="_getRequest">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequest">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#41-47" title="Go to source code">getRequest</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResponse" id="_getResponse">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Psr.Http.Message.ResponseInterface.html">Psr\Http\Message\ResponseInterface</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResponse">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#49-57" title="Go to source code">getResponse</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the response that was received (if any).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the response that was received (if any).</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Psr.Http.Message.ResponseInterface.html">Psr\Http\Message\ResponseInterface</a></code>|null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasResponse" id="_hasResponse">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasResponse">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#59-67" title="Go to source code">hasResponse</a>( )</code>
+
+		<div class="description short">
+			<p>Returns true if a response was received.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns true if a response was received.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHandlerErrorData" id="_getHandlerErrorData">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHandlerErrorData">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#69-81" title="Go to source code">getHandlerErrorData</a>( )</code>
+
+		<div class="description short">
+			<p>Gets handler specific error data.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets handler specific error data.</p>
+
+<p>This might be an exception, a integer representing an error code, or
+anything else. Relying on this value assumes that you know what handler
+you are using.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEffectiveUri" id="_getEffectiveUri">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Psr.Http.Message.UriInterface.html">Psr\Http\Message\UriInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEffectiveUri">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#83-91" title="Go to source code">getEffectiveUri</a>( )</code>
+
+		<div class="description short">
+			<p>Get the effective URI the request was sent to.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the effective URI the request was sent to.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Psr.Http.Message.UriInterface.html">Psr\Http\Message\UriInterface</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTransferTime" id="_getTransferTime">
+
+		<td class="attributes"><code>
+			 public 
+
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTransferTime">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#93-101" title="Go to source code">getTransferTime</a>( )</code>
+
+		<div class="description short">
+			<p>Get the estimated time the request was being transferred by the handler.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the estimated time the request was being transferred by the handler.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					float<br>Time in seconds.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHandlerStats" id="_getHandlerStats">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHandlerStats">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#103-111" title="Go to source code">getHandlerStats</a>( )</code>
+
+		<div class="description short">
+			<p>Gets an array of all of the handler specific transfer data.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets an array of all of the handler specific transfer data.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHandlerStat" id="_getHandlerStat">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHandlerStat">#</a>
+		<code><a href="source-class-GuzzleHttp.TransferStats.html#113-125" title="Go to source code">getHandlerStat</a>( <span>string <var>$stat</var></span> )</code>
+
+		<div class="description short">
+			<p>Get a specific handler statistic from the handler by name.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get a specific handler statistic from the handler by name.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$stat</var></dt>
+					<dd>Handler specific transfer stat to retrieve.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed|null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

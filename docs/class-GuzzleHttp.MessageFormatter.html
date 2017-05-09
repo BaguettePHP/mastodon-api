@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class GuzzleHttp\MessageFormatter | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li class="active">
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.Client.html">Client</a></li>
+				<li><a href="class-GuzzleHttp.HandlerStack.html">HandlerStack</a></li>
+				<li class="active"><a href="class-GuzzleHttp.MessageFormatter.html">MessageFormatter</a></li>
+				<li><a href="class-GuzzleHttp.Middleware.html">Middleware</a></li>
+				<li><a href="class-GuzzleHttp.Pool.html">Pool</a></li>
+				<li><a href="class-GuzzleHttp.PrepareBodyMiddleware.html">PrepareBodyMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RedirectMiddleware.html">RedirectMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RequestOptions.html">RequestOptions</a></li>
+				<li><a href="class-GuzzleHttp.RetryMiddleware.html">RetryMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.TransferStats.html">TransferStats</a></li>
+				<li><a href="class-GuzzleHttp.UriTemplate.html">UriTemplate</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.ClientInterface.html">ClientInterface</a></li>
+			</ul>
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-GuzzleHttp.choose_handler.html">choose_handler</a></li>
+				<li><a href="function-GuzzleHttp.debug_resource.html">debug_resource</a></li>
+				<li><a href="function-GuzzleHttp.default_ca_bundle.html">default_ca_bundle</a></li>
+				<li><a href="function-GuzzleHttp.default_user_agent.html">default_user_agent</a></li>
+				<li><a href="function-GuzzleHttp.describe_type.html">describe_type</a></li>
+				<li><a href="function-GuzzleHttp.headers_from_lines.html">headers_from_lines</a></li>
+				<li><a href="function-GuzzleHttp.is_host_in_noproxy.html">is_host_in_noproxy</a></li>
+				<li><a href="function-GuzzleHttp.json_decode.html">json_decode</a></li>
+				<li><a href="function-GuzzleHttp.json_encode.html">json_encode</a></li>
+				<li><a href="function-GuzzleHttp.normalize_header_keys.html">normalize_header_keys</a></li>
+				<li><a href="function-GuzzleHttp.uri_template.html">uri_template</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-GuzzleHttp.html" title="Summary of GuzzleHttp"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class MessageFormatter</h1>
+
+
+	<div class="description">
+	<p>Formats log messages using variable substitutions for requests, responses,
+and other transactional data.</p>
+
+<p>The following variable substitutions are supported:</p>
+
+<ul>
+<li>{request}:        Full HTTP request message</li>
+<li>{response}:       Full HTTP response message</li>
+<li>{ts}:             ISO 8601 date in GMT</li>
+<li>{date_iso_8601}   ISO 8601 date in GMT</li>
+<li>{date_common_log} Apache common log date using the configured timezone.</li>
+<li>{host}:           Host of the request</li>
+<li>{method}:         Method of the request</li>
+<li>{uri}:            URI of the request</li>
+<li>{host}:           Host of the request</li>
+<li>{version}:        Protocol version</li>
+<li>{target}:         Request target of the request (path + query + fragment)</li>
+<li>{hostname}:       Hostname of the machine that sent the request</li>
+<li>{code}:           Status code of the response (if available)</li>
+<li>{phrase}:         Reason phrase of the response  (if available)</li>
+<li>{error}:          Any error messages (if available)</li>
+<li>{req_header_*}:   Replace <code>*</code> with the lowercased name of a request header to add to the message</li>
+<li>{res_header_*}:   Replace <code>*</code> with the lowercased name of a response header to add to the message</li>
+<li>{req_headers}:    Request headers</li>
+<li>{res_headers}:    Response headers</li>
+<li>{req_body}:       Request body</li>
+<li>{res_body}:       Response body</li>
+</ul>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-GuzzleHttp.html">GuzzleHttp</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-GuzzleHttp.MessageFormatter.html#8-182" title="Go to source code">MessageFormatter.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-GuzzleHttp.MessageFormatter.html#50-56" title="Go to source code">__construct</a>( <span>string <var>$template</var> = self::CLF</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd>Log message template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format" id="_format">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format">#</a>
+		<code><a href="source-class-GuzzleHttp.MessageFormatter.html#58-171" title="Go to source code">format</a>( <span><code><a href="class-Psr.Http.Message.RequestInterface.html">Psr\Http\Message\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Psr.Http.Message.ResponseInterface.html">Psr\Http\Message\ResponseInterface</a></code> <var>$response</var> = <span class="php-keyword1">null</span></span>, <span>Exception <var>$error</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+		<div class="description short">
+			<p>Returns a formatted message string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a formatted message string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>Request that was sent</dd>
+					<dt><var>$response</var></dt>
+					<dd>Response that was received</dd>
+					<dt><var>$error</var></dt>
+					<dd>Exception that was received</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CLF" id="CLF">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.MessageFormatter.html#38-43" title="Go to source code"><b>CLF</b></a>
+			</code>
+
+			<div class="description short">
+				<p>Apache Common Log Format.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Apache Common Log Format.</p>
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://httpd.apache.org/docs/2.4/logs.html#common">http://httpd.apache.org/docs/2.4/logs.html#common</a><br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CLF" class="anchor">#</a>
+				<code><span class="php-quote">&quot;{hostname} {req_header_User-Agent} - [{date_common_log}] \&quot;{method} {target} HTTP/{version}\&quot; {code} {res_header_Content-Length}&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DEBUG" id="DEBUG">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.MessageFormatter.html#44" title="Go to source code"><b>DEBUG</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEBUG" class="anchor">#</a>
+				<code><span class="php-quote">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;\n{request}\n&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;\n{response}\n--------\n{error}&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SHORT" id="SHORT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.MessageFormatter.html#45" title="Go to source code"><b>SHORT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SHORT" class="anchor">#</a>
+				<code><span class="php-quote">'[{ts}] &quot;{method} {target} HTTP/{version}&quot; {code}'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

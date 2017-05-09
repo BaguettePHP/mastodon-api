@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Interface Psr\Http\Message\StreamInterface | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li class="active">
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Psr.Http.Message.MessageInterface.html">MessageInterface</a></li>
+				<li><a href="class-Psr.Http.Message.RequestInterface.html">RequestInterface</a></li>
+				<li><a href="class-Psr.Http.Message.ResponseInterface.html">ResponseInterface</a></li>
+				<li><a href="class-Psr.Http.Message.ServerRequestInterface.html">ServerRequestInterface</a></li>
+				<li class="active"><a href="class-Psr.Http.Message.StreamInterface.html">StreamInterface</a></li>
+				<li><a href="class-Psr.Http.Message.UploadedFileInterface.html">UploadedFileInterface</a></li>
+				<li><a href="class-Psr.Http.Message.UriInterface.html">UriInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Psr.Http.Message.html" title="Summary of Psr\Http\Message"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface StreamInterface</h1>
+
+
+	<div class="description">
+	<p>Describes a data stream.</p>
+
+<p>Typically, an instance will wrap a PHP stream; this interface provides
+a wrapper around the most common operations, including serialization of
+the entire stream to a string.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Psr.html">Psr</a>\<a href="namespace-Psr.Http.html">Http</a>\<a href="namespace-Psr.Http.Message.html">Message</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Psr.Http.Message.StreamInterface.html#5-158" title="Go to source code">StreamInterface.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#14-28" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			<p>Reads all data from the stream into a string, from the beginning to end.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Reads all data from the stream into a string, from the beginning to end.</p>
+
+<p>This method MUST attempt to seek to the beginning of the stream before
+reading data and read the stream until the end is reached.</p>
+
+<p>Warning: This could attempt to load a large amount of data into memory.</p>
+
+<p>This method MUST NOT raise an exception in order to conform with PHP's
+string casting operations.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						http://php.net/manual/en/language.oop5.magic.php#object.tostring<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#30-35" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			<p>Closes the stream and any underlying resources.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Closes the stream and any underlying resources.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="detach" id="_detach">
+
+		<td class="attributes"><code>
+			 public 
+
+			resource|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_detach">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#37-44" title="Go to source code">detach</a>( )</code>
+
+		<div class="description short">
+			<p>Separates any underlying resources from the stream.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Separates any underlying resources from the stream.</p>
+
+<p>After the stream has been detached, the stream is in an unusable state.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					resource|null<br>Underlying PHP stream, if any
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSize" id="_getSize">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSize">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#46-51" title="Go to source code">getSize</a>( )</code>
+
+		<div class="description short">
+			<p>Get the size of the stream if known.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the size of the stream if known.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer|null<br>Returns the size in bytes if known, or null if unknown.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tell" id="_tell">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tell">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#53-59" title="Go to source code">tell</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the current position of the file read/write pointer</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the current position of the file read/write pointer</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>Position of the file pointer
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br>on error.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="eof" id="_eof">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_eof">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#61-66" title="Go to source code">eof</a>( )</code>
+
+		<div class="description short">
+			<p>Returns true if the stream is at the end of the stream.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns true if the stream is at the end of the stream.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSeekable" id="_isSeekable">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isSeekable">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#68-73" title="Go to source code">isSeekable</a>( )</code>
+
+		<div class="description short">
+			<p>Returns whether or not the stream is seekable.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns whether or not the stream is seekable.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="seek" id="_seek">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_seek">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#75-87" title="Go to source code">seek</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$whence</var> = SEEK_SET</span> )</code>
+
+		<div class="description short">
+			<p>Seek to a position in the stream.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Seek to a position in the stream.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>Stream offset</dd>
+					<dt><var>$whence</var></dt>
+					<dd><p>Specifies how the cursor position will be calculated
+    based on the seek offset. Valid values are identical to the built-in
+    PHP $whence values for <code>fseek()</code>.  SEEK_SET: Set position equal to
+    offset bytes SEEK_CUR: Set position to current location plus offset
+    SEEK_END: Set position to end-of-stream plus offset.</p></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br>on failure.
+				</div>
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://www.php.net/manual/en/function.fseek.php">http://www.php.net/manual/en/function.fseek.php</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rewind" id="_rewind">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_rewind">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#89-99" title="Go to source code">rewind</a>( )</code>
+
+		<div class="description short">
+			<p>Seek to the beginning of the stream.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Seek to the beginning of the stream.</p>
+
+<p>If the stream is not seekable, this method will raise an exception;
+otherwise, it will perform a seek(0).</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br>on failure.
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-Psr.Http.Message.StreamInterface.html#_seek">Psr\Http\Message\StreamInterface::seek()</a></code><br>
+				</div>
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://www.php.net/manual/en/function.fseek.php">http://www.php.net/manual/en/function.fseek.php</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isWritable" id="_isWritable">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isWritable">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#101-106" title="Go to source code">isWritable</a>( )</code>
+
+		<div class="description short">
+			<p>Returns whether or not the stream is writable.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns whether or not the stream is writable.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#108-115" title="Go to source code">write</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			<p>Write data to the stream.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Write data to the stream.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd>The string that is to be written.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>Returns the number of bytes written to the stream.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br>on failure.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isReadable" id="_isReadable">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isReadable">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#117-122" title="Go to source code">isReadable</a>( )</code>
+
+		<div class="description short">
+			<p>Returns whether or not the stream is readable.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns whether or not the stream is readable.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#124-134" title="Go to source code">read</a>( <span>integer <var>$length</var></span> )</code>
+
+		<div class="description short">
+			<p>Read data from the stream.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Read data from the stream.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$length</var></dt>
+					<dd><p>Read up to $length bytes from the object and return
+    them. Fewer than $length bytes may be returned if underlying stream
+    call returns fewer bytes.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br><p>Returns the data read from the stream, or an empty string
+    if no bytes are available.</p>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br>if an error occurs.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContents" id="_getContents">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContents">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#136-143" title="Go to source code">getContents</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the remaining contents in a string</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the remaining contents in a string</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br><p>if unable to read or an error occurs while
+    reading.</p>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMetadata" id="_getMetadata">
+
+		<td class="attributes"><code>
+			 public 
+
+			array|mixed|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMetadata">#</a>
+		<code><a href="source-class-Psr.Http.Message.StreamInterface.html#145-157" title="Go to source code">getMetadata</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Get stream metadata as an associative array or retrieve a specific key.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get stream metadata as an associative array or retrieve a specific key.</p>
+
+<p>The keys returned are identical to the keys returned from PHP's
+stream_get_meta_data() function.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Specific metadata to retrieve.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|mixed|null<br><p>Returns an associative array if no key is
+    provided. Returns a specific key value if a key is provided and the
+    value is found, or null if the key is not found.</p>
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/manual/en/function.stream-get-meta-data.php">http://php.net/manual/en/function.stream-get-meta-data.php</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

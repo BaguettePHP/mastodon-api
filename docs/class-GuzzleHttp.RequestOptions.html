@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class GuzzleHttp\RequestOptions | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li class="active">
+					<a href="namespace-GuzzleHttp.html">
+						GuzzleHttp<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-GuzzleHttp.Cookie.html">
+						Cookie					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Handler.html">
+						Handler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-GuzzleHttp.Promise.html">
+						Promise					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Psr.html">
+						Psr<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.html">
+						Http<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Psr.Http.Message.html">
+						Message					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-Teto.html">
+						Teto<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Teto.Object.html">
+						Object					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.Client.html">Client</a></li>
+				<li><a href="class-GuzzleHttp.HandlerStack.html">HandlerStack</a></li>
+				<li><a href="class-GuzzleHttp.MessageFormatter.html">MessageFormatter</a></li>
+				<li><a href="class-GuzzleHttp.Middleware.html">Middleware</a></li>
+				<li><a href="class-GuzzleHttp.Pool.html">Pool</a></li>
+				<li><a href="class-GuzzleHttp.PrepareBodyMiddleware.html">PrepareBodyMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.RedirectMiddleware.html">RedirectMiddleware</a></li>
+				<li class="active"><a href="class-GuzzleHttp.RequestOptions.html">RequestOptions</a></li>
+				<li><a href="class-GuzzleHttp.RetryMiddleware.html">RetryMiddleware</a></li>
+				<li><a href="class-GuzzleHttp.TransferStats.html">TransferStats</a></li>
+				<li><a href="class-GuzzleHttp.UriTemplate.html">UriTemplate</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-GuzzleHttp.ClientInterface.html">ClientInterface</a></li>
+			</ul>
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-GuzzleHttp.choose_handler.html">choose_handler</a></li>
+				<li><a href="function-GuzzleHttp.debug_resource.html">debug_resource</a></li>
+				<li><a href="function-GuzzleHttp.default_ca_bundle.html">default_ca_bundle</a></li>
+				<li><a href="function-GuzzleHttp.default_user_agent.html">default_user_agent</a></li>
+				<li><a href="function-GuzzleHttp.describe_type.html">describe_type</a></li>
+				<li><a href="function-GuzzleHttp.headers_from_lines.html">headers_from_lines</a></li>
+				<li><a href="function-GuzzleHttp.is_host_in_noproxy.html">is_host_in_noproxy</a></li>
+				<li><a href="function-GuzzleHttp.json_decode.html">json_decode</a></li>
+				<li><a href="function-GuzzleHttp.json_encode.html">json_encode</a></li>
+				<li><a href="function-GuzzleHttp.normalize_header_keys.html">normalize_header_keys</a></li>
+				<li><a href="function-GuzzleHttp.uri_template.html">uri_template</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-GuzzleHttp.html" title="Summary of GuzzleHttp"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RequestOptions</h1>
+
+
+	<div class="description">
+	<p>This class contains a list of built-in Guzzle request options.</p>
+
+<p>More documentation for each option can be found at http://guzzlephp.org/.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-GuzzleHttp.html">GuzzleHttp</a><br>
+		
+
+				<b>Link:</b>
+				<a href="http://docs.guzzlephp.org/en/v6/request-options.html">http://docs.guzzlephp.org/en/v6/request-options.html</a><br>
+			<b>Located at</b> <a href="source-class-GuzzleHttp.RequestOptions.html#4-244" title="Go to source code">RequestOptions.php</a>
+		<br>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ALLOW_REDIRECTS" id="ALLOW_REDIRECTS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#13-34" title="Go to source code"><b>ALLOW_REDIRECTS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>allow_redirects: (bool|array) Controls redirect behavior. Pass false
+to disable redirects, pass true to enable redirects, pass an
+associative to provide custom redirect settings. Defaults to "false".
+This option only works if your handler has the RedirectMiddleware. When
+passing an associative array, you can provide the following key value
+pairs:</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>allow_redirects: (bool|array) Controls redirect behavior. Pass false
+to disable redirects, pass true to enable redirects, pass an
+associative to provide custom redirect settings. Defaults to "false".
+This option only works if your handler has the RedirectMiddleware. When
+passing an associative array, you can provide the following key value
+pairs:</p>
+
+<ul>
+<li>max: (int, default=5) maximum number of allowed redirects.</li>
+<li>strict: (bool, default=false) Set to true to use strict redirects meaning redirect POST requests with POST requests vs. doing what most browsers do which is redirect POST requests with GET requests</li>
+<li>referer: (bool, default=true) Set to false to disable the Referer header.</li>
+<li>protocols: (array, default=['http', 'https']) Allowed redirect protocols.</li>
+<li>on_redirect: (callable) PHP callable that is invoked when a redirect is encountered. The callable is invoked with the request, the redirect response that was received, and the effective URI. Any return value from the on_redirect function is ignored.</li>
+</ul>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ALLOW_REDIRECTS" class="anchor">#</a>
+				<code><span class="php-quote">'allow_redirects'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTH" id="AUTH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#36-43" title="Go to source code"><b>AUTH</b></a>
+			</code>
+
+			<div class="description short">
+				<p>auth: (array) Pass an array of HTTP authentication parameters to use
+with the request. The array must contain the username in index [0],
+the password in index [1], and you can optionally provide a built-in
+authentication type in index [2]. Pass null to disable authentication
+for a request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>auth: (array) Pass an array of HTTP authentication parameters to use
+with the request. The array must contain the username in index [0],
+the password in index [1], and you can optionally provide a built-in
+authentication type in index [2]. Pass null to disable authentication
+for a request.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH" class="anchor">#</a>
+				<code><span class="php-quote">'auth'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="BODY" id="BODY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#45-49" title="Go to source code"><b>BODY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>body: (resource|string|null|int|float|StreamInterface|callable|\Iterator)
+Body to send in the request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>body: (resource|string|null|int|float|StreamInterface|callable|\Iterator)
+Body to send in the request.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#BODY" class="anchor">#</a>
+				<code><span class="php-quote">'body'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CERT" id="CERT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#51-58" title="Go to source code"><b>CERT</b></a>
+			</code>
+
+			<div class="description short">
+				<p>cert: (string|array) Set to a string to specify the path to a file
+containing a PEM formatted SSL client side certificate. If a password
+is required, then set cert to an array containing the path to the PEM
+file in the first array element followed by the certificate password
+in the second array element.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>cert: (string|array) Set to a string to specify the path to a file
+containing a PEM formatted SSL client side certificate. If a password
+is required, then set cert to an array containing the path to the PEM
+file in the first array element followed by the certificate password
+in the second array element.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CERT" class="anchor">#</a>
+				<code><span class="php-quote">'cert'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="COOKIES" id="COOKIES">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#60-67" title="Go to source code"><b>COOKIES</b></a>
+			</code>
+
+			<div class="description short">
+				<p>cookies: (bool|GuzzleHttp\Cookie\CookieJarInterface, default=false)
+Specifies whether or not cookies are used in a request or what cookie
+jar to use or what cookies to send. This option only works if your
+handler has the <code>cookie</code> middleware. Valid values are <code>false</code> and
+an instance of <code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html">GuzzleHttp\Cookie\CookieJarInterface</a></code>.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>cookies: (bool|GuzzleHttp\Cookie\CookieJarInterface, default=false)
+Specifies whether or not cookies are used in a request or what cookie
+jar to use or what cookies to send. This option only works if your
+handler has the <code>cookie</code> middleware. Valid values are <code>false</code> and
+an instance of <code><a href="class-GuzzleHttp.Cookie.CookieJarInterface.html">GuzzleHttp\Cookie\CookieJarInterface</a></code>.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#COOKIES" class="anchor">#</a>
+				<code><span class="php-quote">'cookies'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONNECT_TIMEOUT" id="CONNECT_TIMEOUT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#69-74" title="Go to source code"><b>CONNECT_TIMEOUT</b></a>
+			</code>
+
+			<div class="description short">
+				<p>connect_timeout: (float, default=0) Float describing the number of
+seconds to wait while trying to connect to a server. Use 0 to wait
+indefinitely (the default behavior).</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>connect_timeout: (float, default=0) Float describing the number of
+seconds to wait while trying to connect to a server. Use 0 to wait
+indefinitely (the default behavior).</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONNECT_TIMEOUT" class="anchor">#</a>
+				<code><span class="php-quote">'connect_timeout'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DEBUG" id="DEBUG">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#76-81" title="Go to source code"><b>DEBUG</b></a>
+			</code>
+
+			<div class="description short">
+				<p>debug: (bool|resource) Set to true or set to a PHP stream returned by
+fopen()  enable debug output with the HTTP handler used to send a
+request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>debug: (bool|resource) Set to true or set to a PHP stream returned by
+fopen()  enable debug output with the HTTP handler used to send a
+request.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEBUG" class="anchor">#</a>
+				<code><span class="php-quote">'debug'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DECODE_CONTENT" id="DECODE_CONTENT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#83-88" title="Go to source code"><b>DECODE_CONTENT</b></a>
+			</code>
+
+			<div class="description short">
+				<p>decode_content: (bool, default=true) Specify whether or not
+Content-Encoding responses (gzip, deflate, etc.) are automatically
+decoded.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>decode_content: (bool, default=true) Specify whether or not
+Content-Encoding responses (gzip, deflate, etc.) are automatically
+decoded.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DECODE_CONTENT" class="anchor">#</a>
+				<code><span class="php-quote">'decode_content'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DELAY" id="DELAY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#90-93" title="Go to source code"><b>DELAY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>delay: (int) The amount of time to delay before sending in milliseconds.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>delay: (int) The amount of time to delay before sending in milliseconds.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DELAY" class="anchor">#</a>
+				<code><span class="php-quote">'delay'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="EXPECT" id="EXPECT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#95-111" title="Go to source code"><b>EXPECT</b></a>
+			</code>
+
+			<div class="description short">
+				<p>expect: (bool|integer) Controls the behavior of the
+"Expect: 100-Continue" header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>expect: (bool|integer) Controls the behavior of the
+"Expect: 100-Continue" header.</p>
+
+<p>Set to <code>true</code> to enable the "Expect: 100-Continue" header for all
+requests that sends a body. Set to <code>false</code> to disable the
+"Expect: 100-Continue" header for all requests. Set to a number so that
+the size of the payload must be greater than the number in order to send
+the Expect header. Setting to a number will send the Expect header for
+all requests in which the size of the payload cannot be determined or
+where the body is not rewindable.</p>
+
+<p>By default, Guzzle will add the "Expect: 100-Continue" header when the
+size of the body of a request is greater than 1 MB and a request is
+using HTTP/1.1.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#EXPECT" class="anchor">#</a>
+				<code><span class="php-quote">'expect'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FORM_PARAMS" id="FORM_PARAMS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#113-119" title="Go to source code"><b>FORM_PARAMS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>form_params: (array) Associative array of form field names to values
+where each value is a string or array of strings. Sets the Content-Type
+header to application/x-www-form-urlencoded when no Content-Type header
+is already present.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>form_params: (array) Associative array of form field names to values
+where each value is a string or array of strings. Sets the Content-Type
+header to application/x-www-form-urlencoded when no Content-Type header
+is already present.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FORM_PARAMS" class="anchor">#</a>
+				<code><span class="php-quote">'form_params'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="HEADERS" id="HEADERS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#121-125" title="Go to source code"><b>HEADERS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>headers: (array) Associative array of HTTP headers. Each value MUST be
+a string or array of strings.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>headers: (array) Associative array of HTTP headers. Each value MUST be
+a string or array of strings.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#HEADERS" class="anchor">#</a>
+				<code><span class="php-quote">'headers'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="HTTP_ERRORS" id="HTTP_ERRORS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#127-133" title="Go to source code"><b>HTTP_ERRORS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>http_errors: (bool, default=true) Set to false to disable exceptions
+when a non- successful HTTP response is received. By default,
+exceptions will be thrown for 4xx and 5xx responses. This option only
+works if your handler has the <code>httpErrors</code> middleware.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>http_errors: (bool, default=true) Set to false to disable exceptions
+when a non- successful HTTP response is received. By default,
+exceptions will be thrown for 4xx and 5xx responses. This option only
+works if your handler has the <code>httpErrors</code> middleware.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#HTTP_ERRORS" class="anchor">#</a>
+				<code><span class="php-quote">'http_errors'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="JSON" id="JSON">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#135-140" title="Go to source code"><b>JSON</b></a>
+			</code>
+
+			<div class="description short">
+				<p>json: (mixed) Adds JSON data to a request. The provided value is JSON
+encoded and a Content-Type header of application/json will be added to
+the request if no Content-Type header is already present.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>json: (mixed) Adds JSON data to a request. The provided value is JSON
+encoded and a Content-Type header of application/json will be added to
+the request if no Content-Type header is already present.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#JSON" class="anchor">#</a>
+				<code><span class="php-quote">'json'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="MULTIPART" id="MULTIPART">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#142-151" title="Go to source code"><b>MULTIPART</b></a>
+			</code>
+
+			<div class="description short">
+				<p>multipart: (array) Array of associative arrays, each containing a
+required "name" key mapping to the form field, name, a required
+"contents" key mapping to a StreamInterface|resource|string, an
+optional "headers" associative array of custom headers, and an
+optional "filename" key mapping to a string to send as the filename in
+the part. If no "filename" key is present, then no "filename" attribute
+will be added to the part.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>multipart: (array) Array of associative arrays, each containing a
+required "name" key mapping to the form field, name, a required
+"contents" key mapping to a StreamInterface|resource|string, an
+optional "headers" associative array of custom headers, and an
+optional "filename" key mapping to a string to send as the filename in
+the part. If no "filename" key is present, then no "filename" attribute
+will be added to the part.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#MULTIPART" class="anchor">#</a>
+				<code><span class="php-quote">'multipart'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ON_HEADERS" id="ON_HEADERS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#153-158" title="Go to source code"><b>ON_HEADERS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>on_headers: (callable) A callable that is invoked when the HTTP headers
+of the response have been received but the body has not yet begun to
+download.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>on_headers: (callable) A callable that is invoked when the HTTP headers
+of the response have been received but the body has not yet begun to
+download.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ON_HEADERS" class="anchor">#</a>
+				<code><span class="php-quote">'on_headers'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ON_STATS" id="ON_STATS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#160-169" title="Go to source code"><b>ON_STATS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>on_stats: (callable) allows you to get access to transfer statistics of
+a request and access the lower level transfer details of the handler
+associated with your client. <code>on_stats</code> is a callable that is invoked
+when a handler has finished sending a request. The callback is invoked
+with transfer statistics about the request, the response received, or
+the error encountered. Included in the data is the total amount of time
+taken to send the request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>on_stats: (callable) allows you to get access to transfer statistics of
+a request and access the lower level transfer details of the handler
+associated with your client. <code>on_stats</code> is a callable that is invoked
+when a handler has finished sending a request. The callback is invoked
+with transfer statistics about the request, the response received, or
+the error encountered. Included in the data is the total amount of time
+taken to send the request.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ON_STATS" class="anchor">#</a>
+				<code><span class="php-quote">'on_stats'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="PROGRESS" id="PROGRESS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#171-178" title="Go to source code"><b>PROGRESS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>progress: (callable) Defines a function to invoke when transfer
+progress is made. The function accepts the following positional
+arguments: the total number of bytes expected to be downloaded, the
+number of bytes downloaded so far, the number of bytes expected to be
+uploaded, the number of bytes uploaded so far.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>progress: (callable) Defines a function to invoke when transfer
+progress is made. The function accepts the following positional
+arguments: the total number of bytes expected to be downloaded, the
+number of bytes downloaded so far, the number of bytes expected to be
+uploaded, the number of bytes uploaded so far.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#PROGRESS" class="anchor">#</a>
+				<code><span class="php-quote">'progress'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="PROXY" id="PROXY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#180-185" title="Go to source code"><b>PROXY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>proxy: (string|array) Pass a string to specify an HTTP proxy, or an
+array to specify different proxies for different protocols (where the
+key is the protocol and the value is a proxy string).</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>proxy: (string|array) Pass a string to specify an HTTP proxy, or an
+array to specify different proxies for different protocols (where the
+key is the protocol and the value is a proxy string).</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#PROXY" class="anchor">#</a>
+				<code><span class="php-quote">'proxy'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="QUERY" id="QUERY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#187-193" title="Go to source code"><b>QUERY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>query: (array|string) Associative array of query string values to add
+to the request. This option uses PHP's http_build_query() to create
+the string representation. Pass a string value if you need more
+control than what this method provides</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>query: (array|string) Associative array of query string values to add
+to the request. This option uses PHP's http_build_query() to create
+the string representation. Pass a string value if you need more
+control than what this method provides</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#QUERY" class="anchor">#</a>
+				<code><span class="php-quote">'query'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SINK" id="SINK">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#195-200" title="Go to source code"><b>SINK</b></a>
+			</code>
+
+			<div class="description short">
+				<p>sink: (resource|string|StreamInterface) Where the data of the
+response is written to. Defaults to a PHP temp stream. Providing a
+string will write data to a file by the given name.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>sink: (resource|string|StreamInterface) Where the data of the
+response is written to. Defaults to a PHP temp stream. Providing a
+string will write data to a file by the given name.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SINK" class="anchor">#</a>
+				<code><span class="php-quote">'sink'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SYNCHRONOUS" id="SYNCHRONOUS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#202-208" title="Go to source code"><b>SYNCHRONOUS</b></a>
+			</code>
+
+			<div class="description short">
+				<p>synchronous: (bool) Set to true to inform HTTP handlers that you intend
+on waiting on the response. This can be useful for optimizations. Note
+that a promise is still returned if you are using one of the async
+client methods.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>synchronous: (bool) Set to true to inform HTTP handlers that you intend
+on waiting on the response. This can be useful for optimizations. Note
+that a promise is still returned if you are using one of the async
+client methods.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SYNCHRONOUS" class="anchor">#</a>
+				<code><span class="php-quote">'synchronous'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SSL_KEY" id="SSL_KEY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#210-216" title="Go to source code"><b>SSL_KEY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>ssl_key: (array|string) Specify the path to a file containing a private
+SSL key in PEM format. If a password is required, then set to an array
+containing the path to the SSL key in the first array element followed
+by the password required for the certificate in the second element.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>ssl_key: (array|string) Specify the path to a file containing a private
+SSL key in PEM format. If a password is required, then set to an array
+containing the path to the SSL key in the first array element followed
+by the password required for the certificate in the second element.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SSL_KEY" class="anchor">#</a>
+				<code><span class="php-quote">'ssl_key'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="STREAM" id="STREAM">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#218-222" title="Go to source code"><b>STREAM</b></a>
+			</code>
+
+			<div class="description short">
+				<p>stream: Set to true to attempt to stream a response rather than
+download it all up-front.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>stream: Set to true to attempt to stream a response rather than
+download it all up-front.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#STREAM" class="anchor">#</a>
+				<code><span class="php-quote">'stream'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="VERIFY" id="VERIFY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#224-232" title="Go to source code"><b>VERIFY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>verify: (bool|string, default=true) Describes the SSL certificate
+verification behavior of a request. Set to true to enable SSL
+certificate verification using the system CA bundle when available
+(the default). Set to false to disable certificate verification (this
+is insecure!). Set to a string to provide the path to a CA bundle on
+disk to enable verification using a custom certificate.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>verify: (bool|string, default=true) Describes the SSL certificate
+verification behavior of a request. Set to true to enable SSL
+certificate verification using the system CA bundle when available
+(the default). Set to false to disable certificate verification (this
+is insecure!). Set to a string to provide the path to a CA bundle on
+disk to enable verification using a custom certificate.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#VERIFY" class="anchor">#</a>
+				<code><span class="php-quote">'verify'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TIMEOUT" id="TIMEOUT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#234-238" title="Go to source code"><b>TIMEOUT</b></a>
+			</code>
+
+			<div class="description short">
+				<p>timeout: (float, default=0) Float describing the timeout of the
+request in seconds. Use 0 to wait indefinitely (the default behavior).</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>timeout: (float, default=0) Float describing the timeout of the
+request in seconds. Use 0 to wait indefinitely (the default behavior).</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TIMEOUT" class="anchor">#</a>
+				<code><span class="php-quote">'timeout'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="VERSION" id="VERSION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-GuzzleHttp.RequestOptions.html#240-243" title="Go to source code"><b>VERSION</b></a>
+			</code>
+
+			<div class="description short">
+				<p>version: (float) Specifies the HTTP protocol version to attempt to use.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>version: (float) Specifies the HTTP protocol version to attempt to use.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#VERSION" class="anchor">#</a>
+				<code><span class="php-quote">'version'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
