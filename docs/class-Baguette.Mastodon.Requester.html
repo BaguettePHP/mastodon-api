@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Baguette\Mastodon\Requester | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Baguette.html">
+						Baguette<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Baguette.Mastodon.html">
+						Mastodon<span></span>
+					</a>
+
+						<ul>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Config.html">
+						Config					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Grant.html">
+						Grant					</a>
+
+						</li>
+				<li class="main">
+					<a href="namespace-Baguette.Mastodon.Service.html">
+						Service					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Baguette.Mastodon.Client.html">Client</a></li>
+				<li><a href="class-Baguette.Mastodon.Mastodon.html">Mastodon</a></li>
+				<li class="active"><a href="class-Baguette.Mastodon.Requester.html">Requester</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-Baguette.Mastodon.authorization.html">authorization</a></li>
+				<li><a href="function-Baguette.Mastodon.credential.html" class="deprecated">credential</a></li>
+				<li><a href="function-Baguette.Mastodon.grant.html">grant</a></li>
+				<li><a href="function-Baguette.Mastodon.http.html">http</a></li>
+				<li><a href="function-Baguette.Mastodon.scope.html">scope</a></li>
+				<li><a href="function-Baguette.Mastodon.session.html">session</a></li>
+				<li><a href="function-Baguette.Mastodon.toot.html">toot</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Baguette.Mastodon.html" title="Summary of Baguette\Mastodon"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Requester</h1>
+
+
+	<div class="description">
+	<p>Mastodon Anthorization object factory</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Baguette.html">Baguette</a>\<a href="namespace-Baguette.Mastodon.html">Mastodon</a><br>
+		
+
+				<b>Copyright:</b>
+				2017 Baguette HQ<br>
+				<b>License:</b>
+				<a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a><br>
+				<b>Author:</b>
+				USAMI Kenta <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;:&#x74;&#97;&#100;&#x73;&#x61;&#110;&#64;&#x7a;&#111;&#110;&#x75;&#x2e;&#109;&#101;">&#x74;&#97;&#100;&#x73;&#x61;&#110;&#64;&#x7a;&#111;&#110;&#x75;&#x2e;&#109;&#101;</a><br>
+				<b>See:</b>
+				https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md<br>
+			<b>Located at</b> <a href="source-class-Baguette.Mastodon.Requester.html#12-244" title="Go to source code">Requester.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getAccount" id="_getAccount">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAccount">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#26-43" title="Go to source code">getAccount</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span>, <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Fetching an account</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetching an account</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd></dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+					<dt><var>$id</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#fetching-an-account<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAccountCurrentUser" id="_getAccountCurrentUser">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAccountCurrentUser">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#45-59" title="Go to source code">getAccountCurrentUser</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span> )</code>
+
+		<div class="description short">
+			<p>Getting the current user</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Getting the current user</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd></dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#getting-the-current-user<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateAccount" id="_updateAccount">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateAccount">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#61-90" title="Go to source code">updateAccount</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span>, <span>array <var>$update_data</var></span> )</code>
+
+		<div class="description short">
+			<p>Updating the current user</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Updating the current user</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd></dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+					<dt><var>$update_data</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAccountFollowers" id="_getAccountFollowers">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAccountFollowers">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#92-113" title="Go to source code">getAccountFollowers</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span>, <span>integer <var>$account_id</var></span> )</code>
+
+		<div class="description short">
+			<p>Getting an account's followers</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Getting an account's followers</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd></dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+					<dt><var>$account_id</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a>[]</code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBlocks" id="_getBlocks">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBlocks">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#115-149" title="Go to source code">getBlocks</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Fetching a user's blocks</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetching a user's blocks</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd></dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a>[]</code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFavourites" id="_getFavourites">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Status.html">Baguette\Mastodon\Entity\Status</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFavourites">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#151-185" title="Go to source code">getFavourites</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Fetching a user's favourites</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetching a user's favourites</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd></dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Status.html">Baguette\Mastodon\Entity\Status</a>[]</code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#updating-the-current-user<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="postStatus" id="_postStatus">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_postStatus">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Requester.html#191-226" title="Go to source code">postStatus</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.Toot.html">Baguette\Mastodon\Service\Toot</a></code> <var>$toot</var></span> )</code>
+
+		<div class="description short">
+			<p>Posting a new status</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Posting a new status</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd>$toot</dd>
+					<dt><var>$session</var></dt>
+					<dd></dd>
+					<dt><var>$toot</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://github.com/tootsuite/documentation/blob/master/Using-the-API/API.md#posting-a-new-status<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
