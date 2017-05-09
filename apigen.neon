@@ -1,4 +1,9 @@
-source: [src]
+source:
+  - src
+  - vendor/guzzlehttp/guzzle/src
+  - vendor/guzzlehttp/promises/src
+  - vendor/psr/http-message/src
+  - vendor/zonuexe/objectsystem/src
 destination: docs
 main: "Baguette\\Mastodon\\"
 title: "ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK"
