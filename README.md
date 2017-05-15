@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-$ composer require baguette/mastodon-api
+$ composer require zonuexe/mastodon-api
 ```
 
 ## Requires
