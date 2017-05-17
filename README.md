@@ -66,7 +66,7 @@ $status = $service->postStatus(m\toot('トゥートゥー'));
 * [ ] POST /api/v1/apps
 * [x] GET /api/v1/blocks `Account[] getBlocks(array $options = [])`
 * [x] GET /api/v1/favourites `Status[] getFavourites(array $options = [])`
-* [ ] GET /api/v1/follow_requests
+* [x] GET /api/v1/follow_requests `Account[] getFollowRequests(array $options = [])`
 * [ ] POST /api/v1/follow_requests/:id/authorize
 * [ ] POST /api/v1/follow_requests/:id/reject
 * [ ] POST /api/v1/follows
