@@ -52,7 +52,7 @@ $status = $service->postStatus(m\toot('トゥートゥー'));
 * [x] GET /api/v1/accounts/:id `Account Mastodon::getAccount(int $id)`
 * [x] GET /api/v1/accounts/verify_credentials `Account Mastodon::getAccountCurrentUser()`
 * [x] PATCH /api/v1/accounts/update_credentials  `Account Mastodon::updateAccount(array $update_data)`
-* [ ] GET /api/v1/accounts/:id/followers
+* [x] GET /api/v1/accounts/:id/followers `Account[] getAccountFollowers(int $account_id)`
 * [ ] GET /api/v1/accounts/:id/following
 * [ ] GET /api/v1/accounts/:id/statuses
 * [ ] POST /api/v1/accounts/:id/follow
