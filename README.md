@@ -79,7 +79,7 @@ $status = $service->postStatus(m\toot('トゥートゥー'));
 * [ ] GET /api/v1/reports
 * [ ] POST /api/v1/reports
 * [ ] GET /api/v1/search
-* [ ] GET /api/v1/statuses/:id
+* [x] GET /api/v1/statuses/:id `Status getStatus($status_id)`
 * [ ] GET /api/v1/statuses/:id/context
 * [ ] GET /api/v1/statuses/:id/card
 * [ ] GET /api/v1/statuses/:id/reblogged_by
