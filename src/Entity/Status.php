@@ -49,7 +49,7 @@ class Status extends Entity
         'favourites_count'  => 'int',
         'reblogged'         => 'bool',
         'favourited'        => 'bool',
-        'sensitive'         => 'string',
+        'sensitive'         => 'bool',
         'spoiler_text'      => 'string',
         'visibility'        => 'enum',
         'media_attachments' => 'Baguette\Mastodon\Entity\Attachment[]',
@@ -72,6 +72,15 @@ class Status extends Entity
         }
         if (isset($properties['created_at'])) {
             $properties['created_at'] = map(\DateTimeImmutable::class, $properties['created_at']);
+        }
+        if (isset($properties['media_attachments'])) {
+            $properties['media_attachments'] = map([Attachment::class], $properties['media_attachments']);
+        }
+        if (isset($properties['mentions'])) {
+            $properties['mentions'] = map([Mention::class], $properties['mentions']);
+        }
+        if (isset($properties['tags'])) {
+            $properties['tags'] = map([Tag::class], $properties['tags']);
         }
         if (isset($properties['application'])) {
             $properties['application'] = map(Application::class, $properties['application']);

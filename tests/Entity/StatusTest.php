@@ -89,7 +89,7 @@ class StatusTest extends \Baguette\Mastodon\TestCase
                     'favourites_count'  => 2,
                     'reblogged'         => false,
                     'favourited'        => false,
-                    'sensitive'         => 'NSFW',
+                    'sensitive'         => true,
                     'spoiler_text'      => 'e',
                     'visibility'        => 'public',
                     'media_attachments' => [new Attachment([])],
@@ -128,7 +128,7 @@ class StatusTest extends \Baguette\Mastodon\TestCase
                         'favourites_count'  => 2,
                         'reblogged'         => false,
                         'favourited'        => false,
-                        'sensitive'         => 'NSFW',
+                        'sensitive'         => true,
                         'spoiler_text'      => 'e',
                         'visibility'        => 'public',
                         'media_attachments' => [
