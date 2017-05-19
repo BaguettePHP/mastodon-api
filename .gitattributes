@@ -1,2 +1,2 @@
 tests/ export-ignore
-doc/ export-ignore -crlf -diff
+docs/ export-ignore -crlf -diff
