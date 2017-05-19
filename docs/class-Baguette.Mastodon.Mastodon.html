@@ -118,6 +118,7 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Baguette.Mastodon.Client.html">Client</a></li>
+				<li><a href="class-Baguette.Mastodon.EntityCaster.html">EntityCaster</a></li>
 				<li class="active"><a href="class-Baguette.Mastodon.Mastodon.html">Mastodon</a></li>
 				<li><a href="class-Baguette.Mastodon.Requester.html">Requester</a></li>
 			</ul>
@@ -206,7 +207,7 @@
 				<a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a><br>
 				<b>Author:</b>
 				USAMI Kenta <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;:&#x74;&#97;&#100;&#x73;&#x61;&#110;&#64;&#x7a;&#111;&#110;&#x75;&#x2e;&#109;&#101;">&#x74;&#97;&#100;&#x73;&#x61;&#110;&#64;&#x7a;&#111;&#110;&#x75;&#x2e;&#109;&#101;</a><br>
-			<b>Located at</b> <a href="source-class-Baguette.Mastodon.Mastodon.html#7-47" title="Go to source code">Mastodon.php</a>
+			<b>Located at</b> <a href="source-class-Baguette.Mastodon.Mastodon.html#7-49" title="Go to source code">Mastodon.php</a>
 		<br>
 	</div>
 
@@ -226,7 +227,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#31-35" title="Go to source code">__construct</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span> )</code>
+		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#33-37" title="Go to source code">__construct</a>( <span><code><a href="class-Baguette.Mastodon.Client.html">Baguette\Mastodon\Client</a></code> <var>$client</var></span>, <span><code><a href="class-Baguette.Mastodon.Service.SessionStorage.html">Baguette\Mastodon\Service\SessionStorage</a></code> <var>$session</var></span> )</code>
 
 		<div class="description short">
 			
@@ -256,7 +257,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#37-46" title="Go to source code">__call</a>( <span> <var>$name</var></span>, <span>array <var>$args</var></span> )</code>
+		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#39-48" title="Go to source code">__call</a>( <span> <var>$name</var></span>, <span>array <var>$args</var></span> )</code>
 
 		<div class="description short">
 			
@@ -413,19 +414,58 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="getStatus" id="m_getStatus">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Baguette.Mastodon.Entity.Status.html">Baguette\Mastodon\Entity\Status</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_getStatus">#</a>
+		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#20" title="Go to source code">getStatus</a>( <span> <var>$status_id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$status_id</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Baguette.Mastodon.Entity.Status.html">Baguette\Mastodon\Entity\Status</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="postStatus" id="m_postStatus">
 
 		<td class="attributes"><code>
 			 public 
 
-			<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+			<code><a href="class-Baguette.Mastodon.Entity.Status.html">Baguette\Mastodon\Entity\Status</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#m_postStatus">#</a>
-		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#19" title="Go to source code">postStatus</a>( <span><code><a href="class-Baguette.Mastodon.Service.Toot.html">Baguette\Mastodon\Service\Toot</a></code> <var>$toot</var></span> )</code>
+		<code><a href="source-class-Baguette.Mastodon.Mastodon.html#21" title="Go to source code">postStatus</a>( <span><code><a href="class-Baguette.Mastodon.Service.Toot.html">Baguette\Mastodon\Service\Toot</a></code> <var>$toot</var></span> )</code>
 
 		<div class="description short">
 			
@@ -443,7 +483,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code><a href="class-Baguette.Mastodon.Entity.Account.html">Baguette\Mastodon\Entity\Account</a></code>
+					<code><a href="class-Baguette.Mastodon.Entity.Status.html">Baguette\Mastodon\Entity\Status</a></code>
 				</div>
 
 
