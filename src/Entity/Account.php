@@ -49,11 +49,9 @@ class Account extends Entity
 
     public function __construct(array $properties)
     {
-        if (isset($properties['created_at'])) {
-            $properties['created_at'] = map(\DateTimeImmutable::class, $properties['created_at']);
-        }
-
-        $this->setProperties($properties);
+        $this->setProperties(mapValues($properties, [
+            'created_at' => \DateTimeImmutable::class,
+        ]));
     }
 
     /**

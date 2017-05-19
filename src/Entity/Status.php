@@ -64,29 +64,15 @@ class Status extends Entity
 
     public function __construct(array $properties)
     {
-        if (isset($properties['account'])) {
-            $properties['account'] = map (Account::class, $properties['account']);
-        }
-        if (isset($properties['reblog'])) {
-            $properties['reblog'] = map(Status::class, $properties['reblog']);
-        }
-        if (isset($properties['created_at'])) {
-            $properties['created_at'] = map(\DateTimeImmutable::class, $properties['created_at']);
-        }
-        if (isset($properties['media_attachments'])) {
-            $properties['media_attachments'] = map([Attachment::class], $properties['media_attachments']);
-        }
-        if (isset($properties['mentions'])) {
-            $properties['mentions'] = map([Mention::class], $properties['mentions']);
-        }
-        if (isset($properties['tags'])) {
-            $properties['tags'] = map([Tag::class], $properties['tags']);
-        }
-        if (isset($properties['application'])) {
-            $properties['application'] = map(Application::class, $properties['application']);
-        }
-
-        $this->setProperties($properties);
+        $this->setProperties(mapValues($properties, [
+            'account'           => Account::class,
+            'reblog'            => Status::class,
+            'created_at'        => \DateTimeImmutable::class,
+            'media_attachments' => [Attachment::class],
+            'mentions'          => [Mention::class],
+            'tags'              => [Tag::class],
+            'application'       => Application::class,
+        ]));
     }
 
     /**

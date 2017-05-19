@@ -17,13 +17,16 @@ class Context extends Entity
     use \Teto\Object\TypedProperty;
 
     private static $property_types = [
-        'ancestors'   => 'Status[]',
-        'descendants' => 'Status[]',
+        'ancestors'   => 'Baguette\Mastodon\Entity\Status[]',
+        'descendants' => 'Baguette\Mastodon\Entity\Status[]',
     ];
 
     public function __construct(array $properties)
     {
-        $this->setProperties($properties);
+        $this->setProperties(mapValues($properties, [
+            'ancestors'   => [Status::class],
+            'descendants' => [Status::class],
+        ]));
     }
 
     /**

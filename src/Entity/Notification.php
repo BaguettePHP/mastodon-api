@@ -33,17 +33,11 @@ class Notification extends Entity
 
     public function __construct(array $properties)
     {
-        if (isset($properties['created_at'])) {
-            $properties['created_at'] = map(\DateTimeImmutable::class, $properties['created_at']);
-        }
-        if (isset($properties['account'])) {
-            $properties['account'] = map(Account::class, $properties['account']);
-        }
-        if (isset($properties['status'])) {
-            $properties['status'] = map(Status::class, $properties['status']);
-        }
-
-        $this->setProperties($properties);
+        $this->setProperties(mapValues($properties, [
+            'created_at' =>\DateTimeImmutable::class,
+            'account'    =>Account::class,
+            'status'     =>Status::class,
+        ]));
     }
 
     /**
