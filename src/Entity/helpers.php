@@ -25,7 +25,7 @@ namespace Baguette\Mastodon\Entity
     }
 
     /**
-     * Mapping values to class
+     * Mapping value to object
      *
      * @param  string|string[] $class
      * @param  mixed           $values
@@ -44,5 +44,24 @@ namespace Baguette\Mastodon\Entity
         }
 
         return $retval;
+    }
+
+    /**
+     * Mapping values to object by class map
+     *
+     * @param  array|\ArrayAccess $input_values
+     * @param  array|iterable     $class_map
+     * @param  mixed           $values
+     * @return array
+     */
+    function mapValues($input_values, $class_map)
+    {
+        foreach ($class_map as $prop_name => $class) {
+            if (isset($input_values[$prop_name])) {
+                $input_values[$prop_name] = map($class, $input_values[$prop_name]);
+            }
+        }
+
+        return $input_values;
     }
 }
