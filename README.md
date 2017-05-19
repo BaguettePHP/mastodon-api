@@ -47,6 +47,26 @@ $account = $service->getAccount(42);
 $status = $service->postStatus(m\toot('トゥートゥー'));
 ```
 
+### Manually API request
+
+If you want to request unimplemented APIs in this SDK, you can write the request manually.  This technique is also useful when requesting instance-specific APIs.
+
+```php
+<?php
+
+use Baguette\Mastodon as m;
+
+$service = m\session(
+    'pawoo.net', $client_id, $client_secret,
+    [
+        // ...
+    ]
+);
+
+$response = $service->client->requestAPI('GET', '/api/v1/accounts/29', [], $service->session);
+$class = m\Entity\map(m\Entity\Account::class, \GuzzleHttp\json_decode($response->getBody(), true));
+```
+
 ## Status of implementations
 
 * [x] GET /api/v1/accounts/:id `Account Mastodon::getAccount(int $id)`
