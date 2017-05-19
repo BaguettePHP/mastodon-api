@@ -23,6 +23,7 @@ return [
         'vendor/phpunit/phpunit/src/',
         'vendor/psr/http-message/src/',
         'vendor/respect/validation/library/',
+        'vendor/symfony/var-dumper/',
         'vendor/vlucas/phpdotenv/src/',
         'vendor/zonuexe/objectsystem/src/',
     ],
