@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Function Baguette\Mastodon\Entity\toArrayValue | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
+	<title>Function Baguette\Mastodon\request | ξ ^ω^)ξ Baguette PHP Mastodon API Client / SDK</title>
 
 	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
@@ -35,7 +35,7 @@
 						Config					</a>
 
 						</li>
-				<li class="active main">
+				<li class="main">
 					<a href="namespace-Baguette.Mastodon.Entity.html">
 						Entity					</a>
 
@@ -117,33 +117,26 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Baguette.Mastodon.Entity.Account.html">Account</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Application.html">Application</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Attachment.html">Attachment</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Card.html">Card</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Context.html">Context</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Entity.html">Entity</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Error_.html">Error_</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Instance.html">Instance</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Mention.html">Mention</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Notification.html">Notification</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Status.html">Status</a></li>
-				<li><a href="class-Baguette.Mastodon.Entity.Tag.html">Tag</a></li>
+				<li><a href="class-Baguette.Mastodon.Client.html">Client</a></li>
+				<li><a href="class-Baguette.Mastodon.EntityCaster.html">EntityCaster</a></li>
+				<li><a href="class-Baguette.Mastodon.Mastodon.html">Mastodon</a></li>
+				<li><a href="class-Baguette.Mastodon.Requester.html">Requester</a></li>
 			</ul>
 
 
 
 
-			<h3>Constants</h3>
-			<ul>
-				<li><a href="constant-Baguette.Mastodon.Entity.DATETIME_FORMAT.html">DATETIME_FORMAT</a></li>
-			</ul>
 
 			<h3>Functions</h3>
 			<ul>
-				<li><a href="function-Baguette.Mastodon.Entity.map.html">map</a></li>
-				<li><a href="function-Baguette.Mastodon.Entity.mapValues.html">mapValues</a></li>
-				<li class="active"><a href="function-Baguette.Mastodon.Entity.toArrayValue.html">toArrayValue</a></li>
+				<li><a href="function-Baguette.Mastodon.authorization.html">authorization</a></li>
+				<li><a href="function-Baguette.Mastodon.credential.html" class="deprecated">credential</a></li>
+				<li><a href="function-Baguette.Mastodon.grant.html">grant</a></li>
+				<li><a href="function-Baguette.Mastodon.http.html">http</a></li>
+				<li class="active"><a href="function-Baguette.Mastodon.request.html">request</a></li>
+				<li><a href="function-Baguette.Mastodon.scope.html">scope</a></li>
+				<li><a href="function-Baguette.Mastodon.session.html">session</a></li>
+				<li><a href="function-Baguette.Mastodon.toot.html">toot</a></li>
 			</ul>
 		</div>
 	</div>
@@ -165,7 +158,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-Baguette.Mastodon.Entity.html" title="Summary of Baguette\Mastodon\Entity"><span>Namespace</span></a>
+				<a href="namespace-Baguette.Mastodon.html" title="Summary of Baguette\Mastodon"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Function</span>			</li>
@@ -177,26 +170,49 @@
 	</div>
 
 <div id="content" class="function">
-	<h1>Function toArrayValue</h1>
+	<h1>Function request</h1>
 
 
+	<div class="description">
+	<p>Manually API Request</p>
+	</div>
 
 	<div class="info">
-		<b>Namespace:</b> <a href="namespace-Baguette.html">Baguette</a>\<a href="namespace-Baguette.Mastodon.html">Mastodon</a>\<a href="namespace-Baguette.Mastodon.Entity.html">Entity</a><br>
+		<b>Namespace:</b> <a href="namespace-Baguette.html">Baguette</a>\<a href="namespace-Baguette.Mastodon.html">Mastodon</a><br>
 		
 		<b>Located at</b>
-		<a href="source-function-Baguette.Mastodon.Entity.toArrayValue.html#14-25" title="Go to source code">
-			Entity/helpers.php
+		<a href="source-function-Baguette.Mastodon.request.html#133-152" title="Go to source code">
+			functions.php
 		</a><br>
 	</div>
 
 
 	<table class="summary" id="parameters">
 	<caption>Parameters summary</caption>
-	<tr id="$value">
-		<td class="name"><code>mixed</code></td>
-		<td class="value"><code><var>$value</var></code></td>
-		<td></td>
+	<tr id="$service">
+		<td class="name"><code><code><a href="class-Baguette.Mastodon.Mastodon.html">Baguette\Mastodon\Mastodon</a></code></code></td>
+		<td class="value"><code><var>$service</var></code></td>
+		<td>A instance object of Mastodon class</td>
+	</tr>
+	<tr id="$method">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$method</var></code></td>
+		<td>HTTP Method (GET, POST, PUT, DELETE, ...)</td>
+	</tr>
+	<tr id="$path">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$path</var></code></td>
+		<td>API Path (URL)</td>
+	</tr>
+	<tr id="$options">
+		<td class="name"><code>array</code></td>
+		<td class="value"><code><var>$options</var></code></td>
+		<td>Options for GuzzleHttp</td>
+	</tr>
+	<tr id="$class">
+		<td class="name"><code>string|string[]</code></td>
+		<td class="value"><code><var>$class</var> = <span class="php-keyword1">null</span></code></td>
+		<td>A class name of return value</td>
 	</tr>
 	</table>
 
@@ -204,10 +220,10 @@
 	<caption>Return value summary</caption>
 	<tr>
 		<td class="name"><code>
-			string|array
+			<code><a href="class-Psr.Http.Message.ResponseInterface.html">Psr\Http\Message\ResponseInterface</a></code>|<code><a href="class-Baguette.Mastodon.Entity.Entity.html">Baguette\Mastodon\Entity\Entity</a></code>|<code><a href="class-Baguette.Mastodon.Entity.Entity.html">Baguette\Mastodon\Entity\Entity</a>[]</code>|mixed
 		</code></td>
 		<td>
-			string|array
+			Returns ResponseInterface if $class is NULL.
 		</td>
 	</tr>
 	</table>
