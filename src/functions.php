@@ -129,3 +129,24 @@ function http(\GuzzleHttp\ClientInterface $client = null)
 
     return $cached_client;
 }
+
+/**
+ * Manually API Request
+ *
+ * @param  Mastodon        $service A instance object of Mastodon class
+ * @param  string          $method  HTTP Method (GET, POST, PUT, DELETE, ...)
+ * @param  string          $path    API Path (URL)
+ * @param  array           $options Options for GuzzleHttp
+ * @param  string|string[] $class   A class name of return value
+ * @return \Psr\Http\Message\ResponseInterface|Entity\Entity|Entity\Entity[]|mixed Returns ResponseInterface if $class is NULL.
+ */
+function request(Mastodon $service, $method, $path, $options, $class = null)
+{
+    $response = $service->client->requestAPI($method, $path, $options, $service->session);
+
+    if ($class === null) {
+        return $response;
+    }
+
+    return Entity\map($class, \GuzzleHttp\json_decode($response->getBody(), true));
+}

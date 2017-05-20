@@ -63,8 +63,12 @@ $service = m\session(
     ]
 );
 
-$response = $service->client->requestAPI('GET', '/api/v1/accounts/29', [], $service->session);
-$class = m\Entity\map(m\Entity\Account::class, \GuzzleHttp\json_decode($response->getBody(), true));
+/** @var m\Entity\Account */
+$entity = m\request($service, 'GET', '/api/v1/accounts/29', [], m\Entity\Account::class);
+
+// If you are a PhpStorm user, you can safely type the variable in the action of `/** @var */`.
+// Probably the following code will be fill with methods and properties by code completion.
+$entity->█
 ```
 
 ## Status of implementations
