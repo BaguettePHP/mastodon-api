@@ -51,7 +51,6 @@ namespace Baguette\Mastodon\Entity
      *
      * @param  array|\ArrayAccess $input_values
      * @param  array|iterable     $class_map
-     * @param  mixed           $values
      * @return array
      */
     function mapValues($input_values, $class_map)
