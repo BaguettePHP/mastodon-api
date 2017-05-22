@@ -13,6 +13,8 @@
         "paragonie/random_compat": "^2.0",
         "symfony/polyfill-php70": "^1.3",
         "symfony/var-dumper": "^3.2",
+        "filp/whoops": "^2.1",
+        "zonuexe/simple-routing": "^0.5.3",
         "phpunit/phpunit": "^4.8"
     },
     "autoload": {
