@@ -133,7 +133,7 @@ class DotEnvStorage extends \Dotenv\Loader implements Storage
         $this->setAuthorization(
             $authorization->access_token,
             $authorization->scope,
-            $authorization->created_at->getTimestamp()
+            $authorization->created_at ? $authorization->created_at->getTimestamp() : time()
         );
     }
 
