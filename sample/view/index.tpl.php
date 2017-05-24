@@ -9,3 +9,5 @@
 /** @var $var variables */
 ?>
 <h1>Mastodon Sample App</h1>
+<?php include __DIR__ . '/_login.tpl.php'; ?>
+
