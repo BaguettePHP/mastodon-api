@@ -2,6 +2,7 @@
 
 namespace Baguette\Mastodon\Grant;
 
+use Baguette\Mastodon;
 use Baguette\Mastodon\Service\AuthFactory;
 use Baguette\Mastodon\Service\Scope;
 use GuzzleHttp\ClientInterface as Client;
@@ -23,11 +24,29 @@ class CodeGrant extends Grant
 
     /**
      * @param string $code
+     * @param string $redirect_uri
      */
     public function __construct($code, $redirect_uri)
     {
         $this->code = $code;
         $this->redirect_uri = $redirect_uri;
+    }
+
+    /**
+     * @param  Mastodon\Client $client
+     * @param  AuthFactory $auth
+     * @param  Scope  $scope
+     * @param  string $callback_uri
+     * @return string
+     */
+    public static function getRedirectUrl(Mastodon\Client $client, Mastodon\Service\AuthFactory $auth, Scope $scope, $callback_uri)
+    {
+        return sprintf('%s://%s/oauth/authorize?%s', $client->getScheme(), $client->getHostname(), http_build_query([
+            'client_id' => $auth->client_id,
+            'response_type' => 'code',
+            'redirect_uri' => $callback_uri,
+            'scopes' => (string)$scope,
+        ]));
     }
 
     /**
