@@ -11,6 +11,9 @@
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/variables.php';
+require_once __DIR__ . '/app.php';
+
+const SERVICE_NAME = 'PhpMastodonSDK SampleApp';
 
 call_user_func(function() {
     error_reporting(-1);
