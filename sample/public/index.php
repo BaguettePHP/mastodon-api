@@ -1,14 +1,12 @@
 <?php
 
 /**
- * Mastodon SampleApp router and core application file
+ * Mastodon SampleApp core application file
  *
  * @author    USAMI Kenta <tadsan@zonu.me>
  * @copyright 2017 Baguette HQ
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
-
-use Teto\Routing\Action;
 
 require __DIR__ . '/../inc/bootstrap.php';
 
@@ -23,10 +21,7 @@ if (php_sapi_name() === 'cli-server') {
     }
 }
 
-$routes = [];
-$routes['index'] = ['GET', '/', function (Action $action) {
-    return [200, [], view('index')];
-}];
+$routes = require(__DIR__ . '/../inc/routes.php');
 
 router($router = new \Teto\Routing\Router($routes));
 
