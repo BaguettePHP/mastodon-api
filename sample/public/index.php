@@ -29,7 +29,14 @@ $routes['index'] = ['GET', '/', function (Action $action) {
 }];
 
 router($router = new \Teto\Routing\Router($routes));
-$action = $router->match($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
+
+$action = $router->match($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+/**
+ * @var int   $status
+ * @var array $headers
+ * @var string|false $content
+ */
 list($status, $headers, $content) = call_user_func($action->value, $action);
 
 http_response_code($status);
