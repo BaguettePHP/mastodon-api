@@ -53,3 +53,35 @@ function router(Router $router = null)
 
     return $cache;
 }
+
+/**
+ * @param  array $input
+ * @return void
+ */
+function set_flash(array $input)
+{
+    $has_flash = !isset($_SESSION['_flash']) || !is_array($_SESSION['_flash']);
+    $flash = $has_flash ? $_SESSION['_flash'] : [];
+
+    foreach ($input as $key => $item) {
+        $flash[$key] = filter_var($item, FILTER_DEFAULT);
+    }
+
+    $_SESSION['_flash'] = $flash;
+}
+
+/**
+ * @param array  $flash
+ * @return array
+ */
+function last_flash(array $flash = null)
+{
+    /** @var array $last_flash */
+    static $last_flash = [];
+
+    if ($flash !== null) {
+        $last_flash = $flash;
+    }
+
+    return $last_flash;
+}
