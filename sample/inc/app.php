@@ -40,4 +40,12 @@ namespace app
 
         return \GuzzleHttp\json_decode($app, true);
     }
+
+    /**
+     * @return string
+     */
+    function get_service_base_url()
+    {
+        return rtrim(getenv('SERVICE_BASE_URL'), '/');
+    }
 }

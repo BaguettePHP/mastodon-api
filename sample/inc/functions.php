@@ -85,3 +85,11 @@ function last_flash(array $flash = null)
 
     return $last_flash;
 }
+
+/**
+ * @return bool
+ */
+function is_production()
+{
+     return getenv('MY_PHP_ENV') === 'production';
+}

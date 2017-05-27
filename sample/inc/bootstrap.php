@@ -24,6 +24,11 @@ call_user_func(function() {
         $whoops->register();
     }
 
+    $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+    $dotenv->load();
+    $dotenv->required('MY_PHP_ENV');
+    $dotenv->required('SERVICE_BASE_URL');
+
     session_save_path(realpath(__DIR__ . '/../cache/session/'));
     session_start();
 
