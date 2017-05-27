@@ -13,6 +13,8 @@ use Baguette\Mastodon as m;
 
 $routes = [];
 $routes['index'] = ['GET', '/', function (Action $action) {
+    chrome_log()->info('Hello, World!');
+
     return [200, [], view('index')];
 }];
 

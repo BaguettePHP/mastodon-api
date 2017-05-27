@@ -8,6 +8,8 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
 
+use Monolog\Logger;
+use Monolog\Handler\ChromePHPHandler;
 use Teto\Routing\Router;
 
 /**
@@ -84,6 +86,22 @@ function last_flash(array $flash = null)
     }
 
     return $last_flash;
+}
+
+/**
+ * @return ChromePHPHandler
+ */
+function chrome_log()
+{
+    /** @var ChromePHPHandler */
+    static $logger;
+
+    if ($logger === null) {
+        $logger = new \Monolog\Logger('');
+        $logger->pushHandler(new ChromePHPHandler(Logger::INFO));
+    }
+
+    return $logger;
 }
 
 /**
