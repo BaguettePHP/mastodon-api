@@ -16,7 +16,9 @@ return [
     // your application should be included in this list.
     'directory_list' => [
         'src/',
+        'sample/inc/',
         'tests/',
+        'vendor/filp/whoops/src/Whoops/',
         'vendor/guzzlehttp/guzzle/src/',
         'vendor/guzzlehttp/promises/src/',
         'vendor/guzzlehttp/psr7/src/',
@@ -27,8 +29,10 @@ return [
         'vendor/symfony/var-dumper/',
         'vendor/vlucas/phpdotenv/src/',
         'vendor/zonuexe/objectsystem/src/',
+        'vendor/zonuexe/simple-routing/src/',
     ],
     'file_list' => [
+        'sample/public/index.php',
         'src/functions.php',
         'src/Entity/helpers.php',
     ],
