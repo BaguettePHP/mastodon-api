@@ -40,6 +40,12 @@ namespace app
                 ]
             ];
 
+            chrome_log()->info('request', [
+                'method' => 'POST',
+                'uri' => $create_app_path,
+                'options' => $request_options,
+            ]);
+
             $response = m\http()->request('POST', $create_app_path, $request_options);
             $app = (string)$response->getBody();
             file_put_contents($path, $app);
