@@ -34,7 +34,7 @@ $routes['post_login'] = ['POST', '/login', function (Action $action) {
 
     $client = new m\Client($instance, ['name' => SERVICE_NAME]);
     $scope = m\scope('read write follow');
-    $callback_url = "http://{$_SERVER['HTTP_HOST']}" . router()->makePath('auth_callback');
+    $callback_url = app\get_service_base_url() . router()->makePath('auth_callback');
 
     try {
         $app = app\get_client_app($client, $scope, [$callback_url]);
