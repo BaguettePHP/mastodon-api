@@ -18,7 +18,7 @@ const SERVICE_NAME = 'PhpMastodonSDK SampleApp';
 call_user_func(function() {
     error_reporting(-1);
 
-    if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    if (!is_production()) {
         $whoops = new \Whoops\Run;
         $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
         $whoops->register();
