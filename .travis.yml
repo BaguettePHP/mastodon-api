@@ -6,10 +6,13 @@ php:
     - "7.0"
     - "7.1"
     - "hhvm"
-
+env:
+  matrix:
+    - DEPENDENCIES=""
+    - DEPENDENCIES="--prefer-lowest --prefer-stable"
 before_script:
-    - composer install --prefer-dist --dev
-    - phpenv rehash
+  - composer update $DEPENDENCIES
+  - phpenv rehash
 
 notifications:
   email: false
