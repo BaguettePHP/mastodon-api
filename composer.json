@@ -15,6 +15,7 @@
         "symfony/var-dumper": "^3.2",
         "filp/whoops": "^2.1",
         "zonuexe/simple-routing": "^0.5.3",
+        "monolog/monolog": "^1.22",
         "phpunit/phpunit": "^4.8"
     },
     "autoload": {

@@ -8,6 +8,10 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0
  */
 
+use Monolog\Logger;
+use Monolog\Handler\ChromePHPHandler;
+use Monolog\Handler\NoopHandler;
+use Monolog\Handler\StreamHandler;
 use Teto\Routing\Router;
 
 /**
@@ -52,4 +56,79 @@ function router(Router $router = null)
     }
 
     return $cache;
+}
+
+/**
+ * @param  array $input
+ * @return void
+ */
+function set_flash(array $input)
+{
+    $has_flash = !isset($_SESSION['_flash']) || !is_array($_SESSION['_flash']);
+    $flash = $has_flash ? $_SESSION['_flash'] : [];
+
+    foreach ($input as $key => $item) {
+        $flash[$key] = filter_var($item, FILTER_DEFAULT);
+    }
+
+    $_SESSION['_flash'] = $flash;
+}
+
+/**
+ * @param array  $flash
+ * @return array
+ */
+function last_flash(array $flash = null)
+{
+    /** @var array $last_flash */
+    static $last_flash = [];
+
+    if ($flash !== null) {
+        $last_flash = $flash;
+    }
+
+    return $last_flash;
+}
+
+/**
+ * @return \Monolog\Logger
+ */
+function app_log()
+{
+    /** @var \Monolog\Logger */
+    static $logger;
+
+    if ($logger === null) {
+        $path = implode(DIRECTORY_SEPARATOR, [__DIR__, getenv('MY_PHP_ENV') . '.php']);
+        $fp = fopen($path, 'wb+');
+        $logger = new \Monolog\Logger('');
+        $logger->pushHandler(new StreamHandler($fp, Logger::INFO, true, null, true));
+    }
+
+    return $logger;
+}
+
+/**
+ * @return \Monolog\Logger
+ */
+function chrome_log()
+{
+    /** @var \Monolog\Logger */
+    static $logger;
+
+    if ($logger === null) {
+        $logger  = new \Monolog\Logger('');
+        $handler = is_production() ? new NoopHandler : new ChromePHPHandler(Logger::INFO);
+        $logger->pushHandler($handler);
+    }
+
+    return $logger;
+}
+
+/**
+ * @return bool
+ */
+function is_production()
+{
+     return getenv('MY_PHP_ENV') === 'production';
 }

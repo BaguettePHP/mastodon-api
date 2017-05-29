@@ -9,3 +9,15 @@
 /** @var $var variables */
 ?>
 <h1>Mastodon Sample App</h1>
+
+<ul>
+    <?php foreach ($_SESSION['mastodons'] as $acct => $mastodon): ?>
+        <li>
+            <a href="<?= h(router()->makePath('acct', ['acct' => $acct])) ?>">
+                <?= h($acct) ?>
+            </a>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+<?php include __DIR__ . '/_login.tpl.php'; ?>

@@ -11,16 +11,26 @@
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/variables.php';
+require_once __DIR__ . '/app.php';
+
+const SERVICE_NAME = 'PhpMastodonSDK SampleApp';
 
 call_user_func(function() {
     error_reporting(-1);
 
-    if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    if (!is_production()) {
         $whoops = new \Whoops\Run;
         $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
         $whoops->register();
     }
 
+    $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+    $dotenv->load();
+    $dotenv->required('MY_PHP_ENV');
+    $dotenv->required('SERVICE_BASE_URL');
+
     session_save_path(realpath(__DIR__ . '/../cache/session/'));
     session_start();
+
+    app\gc_session();
 });
