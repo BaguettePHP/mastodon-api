@@ -20,7 +20,8 @@ namespace app
     {
         $now = time();
 
-        $_SESSION['login'] = $_SESSION['login'] ?: [];
+        $_SESSION['login'] = isset($_SESSION['login']) ? $_SESSION['login'] : [];
+        $_SESSION['mastodons'] = isset($_SESSION['mastodons']) ? $_SESSION['mastodons'] : [];
 
         foreach ($_SESSION['login'] as $k => $v) {
             if (empty($v['expire']) || $v['expire'] < $now) {
@@ -72,6 +73,9 @@ namespace app
 
             $response = m\http()->request('POST', $create_app_path, $request_options);
             $app = (string)$response->getBody();
+
+            app_log()->debug('create_app', ['app' => $app]);
+
             file_put_contents($path, $app);
         }
 
@@ -81,8 +85,11 @@ namespace app
     /**
      * @return string
      */
-    function get_service_base_url()
+    function get_service_base_url($callback_url_path)
     {
-        return rtrim(getenv('SERVICE_BASE_URL'), '/');
+        return implode('/', [
+            rtrim(getenv('SERVICE_BASE_URL'), '/'),
+            ltrim($callback_url_path, '/')
+        ]);
     }
 }
