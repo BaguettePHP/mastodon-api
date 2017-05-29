@@ -10,6 +10,8 @@
 
 use Monolog\Logger;
 use Monolog\Handler\ChromePHPHandler;
+use Monolog\Handler\NoopHandler;
+use Monolog\Handler\StreamHandler;
 use Teto\Routing\Router;
 
 /**
@@ -89,16 +91,35 @@ function last_flash(array $flash = null)
 }
 
 /**
- * @return ChromePHPHandler
+ * @return \Monolog\Logger
  */
-function chrome_log()
+function app_log()
 {
-    /** @var ChromePHPHandler */
+    /** @var \Monolog\Logger */
     static $logger;
 
     if ($logger === null) {
+        $path = implode(DIRECTORY_SEPARATOR, [__DIR__, getenv('MY_PHP_ENV') . '.php']);
+        $fp = fopen($path, 'wb+');
         $logger = new \Monolog\Logger('');
-        $logger->pushHandler(new ChromePHPHandler(Logger::INFO));
+        $logger->pushHandler(new StreamHandler($fp, Logger::INFO, true, null, true));
+    }
+
+    return $logger;
+}
+
+/**
+ * @return \Monolog\Logger
+ */
+function chrome_log()
+{
+    /** @var \Monolog\Logger */
+    static $logger;
+
+    if ($logger === null) {
+        $logger  = new \Monolog\Logger('');
+        $handler = is_production() ? new NoopHandler : new ChromePHPHandler(Logger::INFO);
+        $logger->pushHandler($handler);
     }
 
     return $logger;
