@@ -32,9 +32,5 @@ call_user_func(function() {
     session_save_path(realpath(__DIR__ . '/../cache/session/'));
     session_start();
 
-    if (isset($_SESSION['_flash'])) {
-        last_flash($_SESSION['_flash']);
-    }
-
-    $_SESSION['_flash'] = [];
+    app\gc_session();
 });

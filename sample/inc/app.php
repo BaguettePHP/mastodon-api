@@ -11,11 +11,35 @@
 namespace app
 {
     use Baguette\Mastodon as m;
+    use Respect\Validation\Validator as v;
+
+    /**
+     * @return void
+     */
+    function gc_session()
+    {
+        $now = time();
+
+        $_SESSION['login'] = $_SESSION['login'] ?: [];
+
+        foreach ($_SESSION['login'] as $k => $v) {
+            if (empty($v['expire']) || $v['expire'] < $now) {
+                unset($_SESSION['login'][$k]);
+            }
+        }
+
+        if (isset($_SESSION['_flash'])) {
+            last_flash($_SESSION['_flash']);
+        }
+
+        $_SESSION['_flash'] = [];
+    }
 
     /**
      * @param  m\Client $client
      * @param  m\Service\Scope $scope
      * @param  string[] $callback_uris
+     * @param  string
      * @return array
      */
     function get_client_app(m\Client $client, m\Service\Scope $scope, array $callback_uris)
