@@ -342,7 +342,7 @@
 </span><span id="133" class="l">        <span class="php-var">$this</span>-&gt;setAuthorization(
 </span><span id="134" class="l">            <span class="php-var">$authorization</span>-&gt;access_token,
 </span><span id="135" class="l">            <span class="php-var">$authorization</span>-&gt;scope,
-</span><span id="136" class="l">            <span class="php-var">$authorization</span>-&gt;created_at-&gt;getTimestamp()
+</span><span id="136" class="l">            <span class="php-var">$authorization</span>-&gt;created_at ? <span class="php-var">$authorization</span>-&gt;created_at-&gt;getTimestamp() : <span class="php-keyword2">time</span>()
 </span><span id="137" class="l">        );
 </span><span id="138" class="l">    }
 </span><span id="139" class="l">
