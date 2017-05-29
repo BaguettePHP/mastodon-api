@@ -108,6 +108,9 @@ final class Client
      */
     public function getHostname()
     {
-        return parse_url($this->instance, PHP_URL_HOST) ?: $this->instance;
+        $host = parse_url($this->instance, PHP_URL_HOST) ?: $this->instance;
+        $port = parse_url($this->instance, PHP_URL_PORT) ?: false;
+
+        return ($port === false) ? $host : "{$host}:{$port}";
     }
 }
