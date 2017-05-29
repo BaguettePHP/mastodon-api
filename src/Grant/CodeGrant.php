@@ -6,6 +6,7 @@ use Baguette\Mastodon;
 use Baguette\Mastodon\Service\AuthFactory;
 use Baguette\Mastodon\Service\Scope;
 use GuzzleHttp\ClientInterface as Client;
+use Respect\Validation\Validator as v;
 
 /**
  * Mastodon Authorization Code grant
@@ -37,16 +38,24 @@ class CodeGrant extends Grant
      * @param  AuthFactory $auth
      * @param  Scope  $scope
      * @param  string $callback_uri
+     * @param  string $state
      * @return string
      */
-    public static function getRedirectUrl(Mastodon\Client $client, Mastodon\Service\AuthFactory $auth, Scope $scope, $callback_uri)
+    public static function getRedirectUrl(Mastodon\Client $client, Mastodon\Service\AuthFactory $auth, Scope $scope, $callback_uri, $state = null)
     {
-        return sprintf('%s://%s/oauth/authorize?%s', $client->getScheme(), $client->getHostname(), http_build_query([
+        $query = [
             'client_id' => $auth->client_id,
             'response_type' => 'code',
             'redirect_uri' => $callback_uri,
             'scopes' => (string)$scope,
-        ]));
+        ];
+
+        if ($state !== null) {
+            v::stringType()->length(1, null)->assert($state);
+            $query['state'] = $state;
+        }
+
+        return sprintf('%s://%s/oauth/authorize?%s', $client->getScheme(), $client->getHostname(), http_build_query($query));
     }
 
     /**
@@ -55,14 +64,14 @@ class CodeGrant extends Grant
      * @param  Scope       $scope
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function auth(Client $http, AuthFactory $factory, Scope $scope)
+    public function auth(Client $http, AuthFactory $factory, Scope $scope = null)
     {
         return $http->request('POST', static::getPathToOAuthToken($factory->client), [
             'form_params' => [
                 'grant_type' => 'authorization_code',
                 'code'  => $this->code,
-                'scope' => (string)$scope,
-            ] + static::getFormParams($factory),
+                'redirect_uri' => $this->redirect_uri,
+            ] + static::getFormParamsWithSecret($factory),
         ]);
     }
 }
