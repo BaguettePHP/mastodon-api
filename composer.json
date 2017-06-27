@@ -16,7 +16,7 @@
         "filp/whoops": "^2.1",
         "zonuexe/simple-routing": "^0.5.3",
         "monolog/monolog": "^1.22",
-        "phpunit/phpunit": "^4.8"
+        "php5friends/phpunit48": "^4.8"
     },
     "autoload": {
         "files": ["src/functions.php", "src/Entity/helpers.php"],
